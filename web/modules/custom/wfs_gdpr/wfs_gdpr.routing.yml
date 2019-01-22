@@ -1,0 +1,21 @@
+# WFS GDPR Defaults routing definition
+#wfs_gdpr.admin:
+#  path: '/admin/config/wfs-settings/general_form'
+#  defaults:
+#    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+#    _title: 'WFS GDPR'
+#  requirements:
+#    _permission: 'access administration pages'
+#  options:
+#    _admin_route: TRUE
+
+wfs_gdpr.general_form:
+  path: 'admin/config/wfs-settings/gdpr'
+  defaults:
+    _form: '\Drupal\wfs_gdpr\Form\GeneralForm'
+    _title: 'Settings for GDPR'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

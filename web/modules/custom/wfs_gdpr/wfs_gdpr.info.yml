@@ -1,0 +1,6 @@
+name: 'WFS GDPR'
+type: module
+description: 'Custom GDPR for WFScorp sites.'
+core: 8.x
+package: 'WFS'
+configure: entity.wfs_gdpr.collection

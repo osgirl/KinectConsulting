@@ -1,0 +1,6 @@
+entity.wfs_gdpr.add_form:
+  route_name: entity.wfs_gdpr.add_form
+  title: 'Add WFS GDPR'
+  appears_on:
+    - entity.wfs_gdpr.collection
+

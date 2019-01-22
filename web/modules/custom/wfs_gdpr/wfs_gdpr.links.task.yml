@@ -1,0 +1,5 @@
+wfs_gdpr_defaults:
+  route_name: 'entity.wfs_gdpr.collection'
+  base_route: 'entity.wfs_gdpr.collection'
+  title: 'WFS GDPR List'
+  weight: 0

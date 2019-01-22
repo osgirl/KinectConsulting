@@ -1,0 +1,54 @@
+<?php
+
+
+/**
+ * Implements hook_schema().
+ */
+function wfs_gdpr_schema() {
+  $schema['wfs_gdpr'] = [
+    'description' => 'Logs users IP and cookies accepted date to db table for WFS GDPR.',
+    'fields' => [
+      'visitor_id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique consent storage ID.',
+      ],
+      'ip_address' => [
+        'description' => 'The IP address.',
+        'type' => 'varchar',
+        // Maximum length of an ipv6 IP address.
+        'length' => 45,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'domain' => [
+        'type' => 'varchar',
+        'length' => 128,
+        'default' => '',
+      ],
+      'cookies_accepted' => [
+        'type' => 'blob',
+        'size' => 'big',
+        'serialize' => TRUE,
+      ],
+      'cookie_disable_banner' => [
+        'type' => 'int',
+        'default' => 0,
+        'description' => 'Boolean indicating disable banner cookies are accepted.',
+      ],
+      'timestamp' => [
+        'description' => 'Time of consent.',
+        'type' => 'int',
+        'unsigned' => FALSE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => [
+      'visitor_id',
+      'ip_address'
+    ],
+  ];
+
+  return $schema;
+}

@@ -1,0 +1,346 @@
+// cd web/modules/custom/wfs_gdpr
+// sass --watch sass/wfs_gdpr.scss:css/wfs_gdpr.css
+
+
+/// Mixin - REM
+@function parseInt($n) {
+  /* 2 */
+  @return $n / ($n * 0 + 1);
+}
+// Rem base 16
+@mixin rem($property, $values) {
+  $px: (); /* 3 */
+  $rem: (); /* 3 */
+  $base: 9;
+
+  @each $value in $values {
+    /* 4 */
+
+    @if $value == 0 or $value == auto {
+      /* 5 */
+      $px: append($px, $value);
+      $rem: append($rem, $value);
+    } @else {
+      $unit: unit($value); /* 6 */
+      $val: parseInt($value); /* 6 */
+
+      @if $unit == 'px' {
+        /* 7 */
+        $px: append($px, $value);
+        $rem: append($rem, ($val / $base + rem));
+      }
+
+      @if $unit == 'rem' {
+        /* 7 */
+        $px: append($px, ($val * $base + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  @if $px == $rem {
+    /* 8 */
+    #{$property}: $px; /* 9 */
+  } @else {
+    #{$property}: $px; /* 9 */
+    #{$property}: $rem; /* 9 */
+  }
+}
+
+
+.sliding-popup-bottom{
+  background: url("../images/gradient.png") center center scroll repeat-y
+    transparent;
+  position: fixed;
+}
+
+#sliding-popup {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 99999;
+  left: 0;
+  text-align: center;
+  .popup-content {
+    #popup-buttons {
+      float: right;
+      @include rem(margin, 0 0 1em 0);
+      max-width: 40%;
+      @media screen and (max-width: 768px) {
+        max-width: 100%;
+      }
+      @media screen and (max-width: 670px) {
+        clear: both;
+        float: none;
+      }
+      button{
+        @media screen and (max-width: 512px) {
+          width: 80%;
+          @include rem(margin, 0 auto 10px);
+          @include rem(padding, 10px);
+        }
+      }
+    }
+    #popup-text {
+      color: #fff;
+      float: left;
+      font-weight: bold;
+      @include rem(margin, 5px 0 0);
+      max-width: 70%;
+      @media screen and (max-width: 768px) {
+        max-width: 100%;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        color: #fff;
+        @include rem(font-size, 16px);
+        font-weight: bold;
+        @include rem(margin, 0 0 5px 0);
+      }
+      h1 {
+        @include rem(font-size, 24px);
+      }
+      h3,
+      p {
+        @include rem(font-size, 12px);
+      }
+    }
+    #popup-buttons{
+      @media screen and (max-width: 600px) {
+        clear: both;
+        float: none;
+        @include rem(margin, 5px 0 16px);
+        max-width: 100%;
+      }
+    }
+  }
+  #cookie_policy {
+    background: rgba(20, 36, 65, 0.9);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    @include rem(padding, 16px 20px);
+    width: 100%;
+    z-index: 999;
+    text-align: left;
+    @media screen and (max-width: 768px) {
+      @include rem(padding, 16px 10px);
+      max-height: none;
+    }
+    > div {
+      margin: 0 auto;
+      max-width: 1300px;
+      @include rem(padding, 0 20px);
+      width: 100%;
+      p {
+        display: inline-block;
+        @include rem(font-size, 16px);
+        vertical-align: middle;
+        @media screen and (max-width: 767px) {
+          @include rem(margin-bottom, 10px);
+        }
+        .btn {
+          @media screen and (max-width: 767px) {
+            display: inline-block;
+          }
+        }
+      }
+      #popup-text {
+        width: 70%;
+        text-align: left;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      #popup-buttons {
+        width: 30%;
+        text-align: center;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+      div {
+        float: left;
+        text-align: left;
+        @media screen and (max-width: 768px) {
+          float: none;
+          text-align: center;
+        }
+        button {
+          white-space: nowrap;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .open-settings {
+    vertical-align: middle;
+    display: inline-block;
+    @include rem(margin, 8px 12px);
+  }
+  .cookie-policy-form {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999999;
+    display: none;
+    form {
+      background: #fff;
+      max-width: 600px;
+      margin: 10% auto 0px;
+    }
+    #cookie-head {
+      background: #f2f2f2;
+      text-align: left;
+      .close {
+        float: right;
+        cursor: pointer;
+        @include rem(margin,10px);
+        @include rem(font-size, 14px);
+        &:hover {
+          color: #ff7301;
+        }
+      }
+      .cookie-logo {
+        display: inline-block;
+        vertical-align: middle;
+        img {
+          display: block;
+          margin: 0px;
+          max-width: 140px;
+        }
+      }
+      .cookie-title {
+        display: inline-block;
+        vertical-align: middle;
+        @include rem(padding, 0px 16px);
+        color: #000;
+        font-weight: bold;
+        text-transform: capitalize;
+        @include rem(font-size, 14px);
+      }
+    }
+    .vertical-tabs {
+      @include rem(margin,0px 0px 0px 160px);
+      &__menu {
+        @include rem(max-width,160px);
+        @include rem(font-size,13px);
+        @include rem(margin,-1px 0 -1px -160px);
+        text-align: left;
+      }
+      &__panes {
+        .form-item-description{
+          @include rem(padding,0 2rem);
+          > label {
+            font-weight: bold;
+            @include rem(font-size,20px);
+            @include rem(margin,8px 0px);
+            text-align: left;
+            display: block;
+            width: 80%;
+          }
+          > .description{
+            text-align: left;
+            p {
+              @include rem(font-size,12px);
+            }
+          }
+        }
+      }
+      .vertical-tab-button li:focus {
+        outline: 0px;
+      }
+    }
+    .js-form-type-checkbox {
+      position: relative;
+      display: inline-block;
+      @include rem(width,30px);
+      @include rem(height,17px);
+      @include rem(min-height,15px);
+      @include rem(margin,5px 0 0px);
+      float: right;
+      right: 14%;
+      input {
+        display: none;
+      }
+      label {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        @include rem(border-radius,17px);
+        @include rem(height, 17px);
+        &:before {
+          position: absolute;
+          content: "";
+          @include rem(height,13px);
+          @include rem(width,13px);
+          @include rem(left,2px);
+          @include rem(bottom,2px);
+          background-color: white;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+          border-radius: 50%;
+        }
+      }
+      input {
+        &:checked + label {
+          background-color: #ff7301;
+        }
+        &:focus + label {
+          box-shadow: 0 0 1px #ff7301;
+        }
+        &:checked + label:before {
+          -webkit-transform: translateX(13px);
+          -ms-transform: translateX(13px);
+          transform: translateX(13px);
+        }
+      }
+      label .cookie-opt {
+        display: block;
+        @include rem(right, -6rem);
+        position: absolute;
+        @include rem(font-size, 15px);
+        @include rem(top, -2px);
+        &.active {
+          display: none;
+        }
+      }
+      input:checked + label .cookie-opt {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+    }
+    .form-actions{
+      overflow: hidden;
+      @include rem(padding, 4px);
+      #accept-all {
+        display: none;
+        @include rem(margin-left, 4px);
+      }
+      .button{
+        @include rem(font-size, 12px);
+        min-width: 110px;
+        float: right;
+      }
+    }
+    #wfs-cookie-link {
+      display: none !important;
+    }
+  }
+}
