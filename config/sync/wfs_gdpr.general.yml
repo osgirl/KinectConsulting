@@ -1,0 +1,17 @@
+wfs_gdpr: null
+_core:
+  default_config_hash: Rq8diXiXbGSU-Xto6I5N3XmgtcbI3yDVzwPZs45ryNU
+default:
+  title: 'Cookies Policy Settings'
+  popup_enabled: 1
+  show_once: 0
+  confirmation: 1
+  message:
+    value: "<p>This is a test message</p>\r\n"
+    format: basic_html
+  button_label: 'OK, I agree'
+  privacy_title: 'Your Privacy'
+  privacy_msg:
+    value: "<p>Your privacy text</p>\r\n"
+    format: basic_html
+  link: 'http://www.google.com'

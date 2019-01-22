@@ -1,0 +1,207 @@
+<?php
+
+/**
+ * @file
+ * Contains wfs_gdpr.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Database\Database;
+use Drupal\Core\Database\Query\Condition;
+
+/**
+ * Implements hook_help().
+ */
+function wfs_gdpr_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the wfs_gdpr module.
+    case 'help.page.wfs_gdpr':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom GDPR for WFScorp sites.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function wfs_gdpr_theme($existing, $type, $theme, $path) {
+  return [
+    'wfs_gdpr_cookies_popup_info' => [
+      'template' => 'wfs-gdpr-cookies-popup-info',
+      'variables' => [
+        'message' => NULL,
+        'form' => NULL,
+        'button_label' => NULL,
+        'disagree_button' => NULL,
+      ],
+      'render element' => 'form'
+    ],
+    'wfs_gdpr_cookies_popup_agreed' => [
+      'template' => 'wfs-gdpr-cookies-popup-agreed',
+      'variables' => [
+        'message' => NULL,
+        'hide_button' => NULL,
+        'find_more_button' => NULL,
+      ],
+    ],
+  ];
+}
+
+
+/**
+ * Implements hook_page_attachments().
+ */
+function wfs_gdpr_page_attachments(&$attachments) {
+  // Getting Settings from WFS GDPR (general) form.
+  $popup_settings = \Drupal::config('wfs_gdpr.general');
+
+  // Check is admin page.
+  $user_is_allowed = Drupal::currentUser()->hasPermission('display wfs cookies');
+
+  // Determines whether the active route is an admin one.
+  $admin_page_match = Drupal::service('router.admin_context')->isAdminRoute();
+
+  // Domain Id
+  $domain_id = (\Drupal::hasService('domain.negotiator') ? \Drupal::service('domain.negotiator')->getActiveId() : 'default');
+
+  // Checking Access.
+  if ($popup_settings->get($domain_id . '.popup_enabled') && $user_is_allowed && !$admin_page_match) {
+
+    $language = Drupal::languageManager()->getCurrentLanguage();
+    // Initialize some needed popup settings messages.
+    $message = $popup_settings->get($domain_id . '.message.value');
+    $message_format = $popup_settings->get($domain_id . '.message.format');
+    $popup_text_info = str_replace(["\r", "\n"], '', $message);
+    // Get Policies accept form.
+    $policy_form = \Drupal::formBuilder()->getForm('\Drupal\wfs_gdpr\Form\WfsGdprPolicyForm');
+
+    $html_info = [
+      '#theme' => 'wfs_gdpr_cookies_popup_info',
+      '#message' => check_markup($popup_text_info, $message_format, FALSE),
+      '#button_label' => $popup_settings->get($domain_id . '.button_label'),
+      '#form' => $policy_form
+    ];
+
+    $clicking_confirmation = $popup_settings->get($domain_id . '.confirmation');
+    $popup_enabled = $popup_settings->get($domain_id . '.popup_enabled');
+    $show_once = $popup_settings->get($domain_id . '.show_once');
+    $cookies_accepted = [];
+    // Get policy data from current IP.
+    $policy_selected = wfs_gdpr_get_cookie_policy_selected();
+
+    if ($policy_selected) {
+      $cookies_accepted  = unserialize($policy_selected->cookies_accepted);
+    }
+    // Get Html markup.
+    $html_info = trim(Drupal::service('renderer')->renderRoot($html_info)->__toString());
+
+    $data['variables'] = [
+      'popup_enabled' => $popup_enabled,
+      'popup_agreed_enabled' => FALSE,
+      'popup_show_once' => $show_once,
+      'popup_hide_agreed' => FALSE,
+      'popup_clicking_confirmation' => $clicking_confirmation,
+      'popup_html_info' => $popup_enabled ? $html_info : FALSE,
+      'popup_html_agreed' => empty($html_agreed) ? FALSE : trim($html_agreed),
+      'popup_language' => $language->getId(),
+      'cookies_accepted' => $cookies_accepted,
+      'cookie_lifetime' => 10*360, // 10 years
+    ];
+
+    // Load libraries and send DrupalSettings.
+    $attachments['#attached']['library'][] = 'core/drupal.vertical-tabs';
+    $attachments['#attached']['library'][] = 'wfs_gdpr/wfs_gdpr';
+    $attachments['#attached']['drupalSettings']['wfs_gdpr'] = $data['variables'];
+
+    _wfs_gdpr_attach_header_scripts($attachments, $cookies_accepted);
+  }
+}
+
+/**
+ *  Helper function to attach scripts to header.
+ *
+ * @param $attachments
+ * @param $gdpr_accepted
+ */
+function _wfs_gdpr_attach_header_scripts(&$attachments, $gdpr_accepted) {
+  // Check if cookies already accepted.
+  if (empty($gdpr_accepted)) {
+    return;
+  }
+
+  // Get entities allowed.
+  $gdpr_entities = \Drupal::entityTypeManager()
+    ->getStorage('wfs_gdpr')
+    ->loadMultiple($gdpr_accepted);
+
+  foreach ($gdpr_entities as $gdpr_id => $gdpr) {
+    $script = $gdpr->getHeaderScript();
+    $id = $gdpr->getOriginalId();
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#tag' => 'script',
+        '#value' => $script
+      ],
+      $id,
+    ];
+  }
+}
+
+/**
+ * Implements hook_page_top().
+ */
+function wfs_gdpr_page_top(&$page_top) {
+  // Get policy data from current IP.
+  $gdpr_accepted = wfs_gdpr_get_cookie_policy_selected();
+
+  if (empty($gdpr_accepted)) {
+    return;
+  }
+  // Unserialize data got from database.
+  $gdpr_accepted  = unserialize($gdpr_accepted->cookies_accepted);
+  // Get entities allowed.
+  $gdpr_entities = \Drupal::entityTypeManager()
+    ->getStorage('wfs_gdpr')
+    ->loadMultiple($gdpr_accepted);
+
+  foreach ($gdpr_entities as $gdpr_id => $gdpr) {
+    // Load noscript (body) tag.
+    $noscript = $gdpr->getBodyScript();
+    if ($noscript) {
+      $id = $gdpr->getOriginalId();
+      $page_top[$id] = [
+        '#noscript' => TRUE,
+        '#markup' => $noscript,
+        '#allowed_tags' => ['iframe', 'noscript', 'script'],
+      ];
+    }
+  }
+}
+
+/**
+ * Get cookie policy selected filtered by IP.
+ */
+function wfs_gdpr_get_cookie_policy_selected($ip_address = 0, $domain_id = 0) {
+  // Get current IP.
+  if (!$ip_address) {
+    $ip_address = \Drupal::request()->getClientIp();
+  }
+  // Get domain Id.
+  if (!$domain_id) {
+      $domain_id = (\Drupal::hasService('domain.negotiator') ? \Drupal::service('domain.negotiator')->getActiveId() : 'default');
+  }
+
+  $result = Database::getConnection()->query(
+    "SELECT * FROM {wfs_gdpr} WHERE ip_address = :ip_address AND domain = :domain",
+    [
+    ':ip_address' => $ip_address,
+    ':domain' => $domain_id,
+    ]
+  )->fetchObject();
+
+  return $result;
+}

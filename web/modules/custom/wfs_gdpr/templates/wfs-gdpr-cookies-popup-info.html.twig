@@ -1,0 +1,31 @@
+
+{#
+/**
+ * @file
+ * This is a template file for a banner prompting user to give their consent for
+ * the website to set cookies.
+ *
+ * When overriding this template it is important to note that jQuery will use
+ * the following classes to assign actions to buttons:
+ *
+ * agree-button      - agree to setting cookies
+ *
+ * Variables available:
+ * - form:  Contains the popup form that will be display whithin the lightbox.
+ * - message:  Contains the text that will be display whithin the banner
+ * - button_label: Label for the primary/agree button. Note that this is the
+ *   primary button. For backwards compatibility, the name remains agree_button.
+ */
+#}
+<div class="cookie-policy-form">{{ form }}</div>
+<div id="cookie_policy" class="popup-content info">
+  <div class="cookie-policy-info">
+    <div id="popup-text">
+      {{ message }}
+    </div>
+    <div id="popup-buttons">
+      <a href='#' class="open-settings">Cookie Settings</a>
+      <button type="button" id="agree" class="agree-button btn button">{{ button_label }}</button>
+    </div>
+  </div>
+</div>

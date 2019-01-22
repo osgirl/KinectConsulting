@@ -1,0 +1,8 @@
+# WFS GDPR menu items definition
+entity.wfs_gdpr.collection:
+  title: 'WFS GDPR'
+  route_name: entity.wfs_gdpr.collection
+  description: 'List WFS GDPR (bundles)'
+  parent: system.admin_config_system
+  weight: 99
+
