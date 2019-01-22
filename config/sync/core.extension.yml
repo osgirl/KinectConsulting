@@ -22,6 +22,8 @@ module:
   history: 0
   image: 0
   link: 0
+  link_attributes: 0
+  menu_export: 0
   menu_ui: 0
   node: 0
   options: 0
