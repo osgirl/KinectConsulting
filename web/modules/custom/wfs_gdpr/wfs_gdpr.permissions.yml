@@ -1,0 +1,4 @@
+administer wfs cookies:
+  title: 'Administer WFS Cookies settings'
+display wfs cookies:
+  title: 'Display WFS Cookies'

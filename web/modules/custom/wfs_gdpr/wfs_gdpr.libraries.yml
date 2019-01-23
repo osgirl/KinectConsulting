@@ -1,0 +1,13 @@
+wfs_gdpr:
+  version: 1.x
+  js:
+    js/wfs_gdpr.js: {}
+  css:
+    state:
+      css/wfs_gdpr.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+    - core/jquery.cookie

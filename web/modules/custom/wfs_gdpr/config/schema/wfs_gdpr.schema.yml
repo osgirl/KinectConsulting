@@ -1,0 +1,30 @@
+wfs_gdpr.wfs_gdpr.*:
+  type: config_entity
+  label: 'WFS GDPR config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    status:
+      type: boolean
+      label: 'Is published'
+    label:
+      type: label
+      label: 'Label'
+    description:
+      type: text_format
+      label: 'Description'
+    uuid:
+      type: string
+    header_script:
+      type: text
+      label: 'Header Script'
+    weight:
+      type: integer
+      label: 'Weight'
+    body_script:
+      type: text
+      label: 'Body Script'
+    domain:
+      type: string
+      label: 'domain'
