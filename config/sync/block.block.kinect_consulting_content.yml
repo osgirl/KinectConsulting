@@ -1,0 +1,22 @@
+uuid: 2c83ebcd-9124-4975-8da3-06c0137daf77
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kinect_consulting
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: kinect_consulting_content
+theme: kinect_consulting
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 78099a9a-3a48-4832-a22d-f0d2d55509da
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kinect_consulting
+_core:
+  default_config_hash: ffxthelqQF8xcr4GTG4HlaNNsluiHftN0pujmQpW0bQ
+id: kinect_consulting_local_actions
+theme: kinect_consulting
+region: header
+weight: 20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

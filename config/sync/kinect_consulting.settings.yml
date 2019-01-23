@@ -1,0 +1,21 @@
+schemas:
+  bootstrap: 8000
+  kinect_consulting: 8000
+logo:
+  path: themes/custom/kinect_consulting/logo.png
+  url: ''
+  use_default: false
+_core:
+  default_config_hash: 2kkQIPIOXIDDRwE4-WwWW-d_UtzyMlB42F3B8xGy6QM
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: themes/custom/kinect_consulting/favicon.ico
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+table_responsive: '-1'
+table: ''

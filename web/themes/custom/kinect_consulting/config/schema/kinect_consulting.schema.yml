@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the Kinect Consulting theme.
+
+kinect_consulting.settings:
+  type: theme_settings
+  label: 'Kinect Consulting settings'

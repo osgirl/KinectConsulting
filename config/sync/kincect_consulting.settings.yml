@@ -1,0 +1,6 @@
+cdn_provider: ''
+logo:
+  path: themes/kinect_consulting/logo.jpg
+  use_default: false
+_core:
+  default_config_hash: g1tFU8jydnLI8tZ3WMJ3xMLDEbiRe39JNC2URTumw3I

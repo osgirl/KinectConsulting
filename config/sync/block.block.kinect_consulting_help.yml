@@ -1,0 +1,22 @@
+uuid: 300e6249-f30a-4aa7-8bf0-e47c9a658fba
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - kinect_consulting
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: kinect_consulting_help
+theme: kinect_consulting
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

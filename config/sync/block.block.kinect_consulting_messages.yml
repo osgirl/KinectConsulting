@@ -1,0 +1,22 @@
+uuid: fac0aa8f-6489-47ff-a70d-90ce8d6cf440
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kinect_consulting
+_core:
+  default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
+id: kinect_consulting_messages
+theme: kinect_consulting
+region: header
+weight: -50
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

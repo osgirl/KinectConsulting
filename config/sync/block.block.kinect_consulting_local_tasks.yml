@@ -1,0 +1,22 @@
+uuid: 8cb8f87c-8322-40f5-b2c3-dc48b02c6704
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kinect_consulting
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: kinect_consulting_local_tasks
+theme: kinect_consulting
+region: header
+weight: 10
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 84ea3404-f070-45ac-92f0-d53df705c48e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kinect_consulting
+_core:
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: kinect_consulting_powered
+theme: kinect_consulting
+region: footer
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }
