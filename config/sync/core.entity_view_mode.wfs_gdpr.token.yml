@@ -1,0 +1,10 @@
+uuid: dbe6f7fb-6898-483a-9c29-766d4deac6c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - wfs_gdpr
+id: wfs_gdpr.token
+label: Token
+targetEntityType: wfs_gdpr
+cache: true

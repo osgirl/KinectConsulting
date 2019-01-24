@@ -1,0 +1,30 @@
+uuid: b7beada2-b81c-4a68-8d38-c6e7f8ea6321
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog_articles
+  module:
+    - system
+    - views
+  theme:
+    - kinect_consulting
+id: kc_block_recent_articles
+theme: kinect_consulting
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:blog_articles-block_recent_articles'
+settings:
+  id: 'views_block:blog_articles-block_recent_articles'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /articles
+    negate: false
+    context_mapping: {  }

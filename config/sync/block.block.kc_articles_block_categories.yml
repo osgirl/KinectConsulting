@@ -1,0 +1,32 @@
+uuid: a89a5853-9b16-48c3-85a2-e7637ac25d6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blog_articles
+  module:
+    - ctools
+    - views
+  theme:
+    - kinect_consulting
+id: kc_articles_block_categories
+theme: kinect_consulting
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:blog_articles-block_categories'
+settings:
+  id: 'views_block:blog_articles-block_categories'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
