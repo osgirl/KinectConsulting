@@ -3,15 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.item_list
+    - core.entity_view_mode.node.vertical_item_list
     - field.storage.node.body
     - field.storage.node.field_author
     - field.storage.node.field_image
     - field.storage.node.field_tags
+    - image.style.290x195
     - node.type.article
     - taxonomy.vocabulary.authors
     - taxonomy.vocabulary.tags
   content:
-    - 'taxonomy_term:tags:158f4c9f-d2f8-48fc-897e-624f1a814d17'
+    - 'taxonomy_term:tags:da5e3de1-de0e-48a0-9212-a8559a71848f'
   module:
     - image
     - node
@@ -52,7 +55,7 @@ display:
         type: basic
         options:
           submit_button: Search
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -615,13 +618,17 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: '<h2>Search blogs by:</h2>'
+          content: '<h2 class="text-center">Search blogs by:</h2>'
           plugin_id: text_custom
       defaults:
         header: false
         fields: true
         filters: false
         filter_groups: false
+        arguments: false
+        style: false
+        row: false
+        empty: false
       filters:
         status:
           value: '1'
@@ -688,53 +695,6 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-            type: date
-          group: 1
-          exposed: true
-          expose:
-            operator_id: created_op
-            label: ''
-            description: ''
-            use_operator: false
-            operator: created_op
-            identifier: date
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: created
-          plugin_id: date
         field_author_target_id:
           id: field_author_target_id
           table: node__field_author
@@ -784,6 +744,102 @@ display:
         operator: AND
         groups:
           1: AND
+      arguments:
+        created_year:
+          id: created_year
+          table: node_field_data
+          field: created_year
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: query_parameter
+          default_argument_options:
+            query_param: year
+            fallback: all
+            multiple: or
+          default_argument_skip_url: true
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          entity_type: node
+          plugin_id: date_year
+        created_month:
+          id: created_month
+          table: node_field_data
+          field: created_month
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: query_parameter
+          default_argument_options:
+            query_param: month
+            fallback: all
+            multiple: or
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          entity_type: node
+          plugin_id: date_month
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: item_list
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: '<h3>No results</h3> '
+          plugin_id: text_custom
     cache_metadata:
       max-age: -1
       contexts:
@@ -1087,7 +1143,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
-      title: 'Recent Articles'
+      title: 'Featured Articles'
       defaults:
         title: false
         fields: false
@@ -1095,6 +1151,8 @@ display:
         filters: false
         filter_groups: false
         pager: false
+        style: false
+        row: false
       fields:
         field_image:
           id: field_image
@@ -1147,7 +1205,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: ''
+            image_style: 290x195
             image_link: content
           group_column: ''
           group_columns: {  }
@@ -1470,6 +1528,18 @@ display:
         options:
           items_per_page: 3
           offset: 0
+      style:
+        type: default
+        options:
+          row_class: 'col-xs-12 col-sm-6 col-md-4'
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: vertical_item_list
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:

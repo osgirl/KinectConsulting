@@ -1,0 +1,41 @@
+uuid: 20dfe070-d937-4065-bea6-069342abfdcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.standard_content_page
+    - paragraphs.paragraphs_type.hero_item
+    - paragraphs.paragraphs_type.iframe
+    - paragraphs.paragraphs_type.image_text
+  module:
+    - entity_reference_revisions
+id: node.standard_content_page.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: standard_content_page
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image_text: image_text
+      hero_item: hero_item
+      iframe: iframe
+    target_bundles_drag_drop:
+      image_text:
+        enabled: true
+        weight: -7
+      hero_item:
+        enabled: true
+        weight: -6
+      iframe:
+        enabled: true
+        weight: -5
+field_type: entity_reference_revisions

@@ -7,11 +7,11 @@ default:
   show_once: 0
   confirmation: 1
   message:
-    value: "<p>This is a test message</p>\r\n"
+    value: "<p><span>By continuing to navigate around our website or by clicking “Accept All Cookies,” you agree to the storing of first-and third-party cookies on your computer.&nbsp; You can also visit our&nbsp;</span><a href=\"https://www.wfscorp.com/en/privacy-center\">Privacy Center</a><span>&nbsp;</span><span>to learn more and/or to opt out of most cookies.&nbsp; Cookies help enhance website navigation, analyze website usage, and/or assist in our marketing efforts. Please note that blocking some types of cookies may impact your experience of the website and the services we are able to offer.</span></p>\r\n"
     format: basic_html
-  button_label: 'OK, I agree'
+  button_label: 'ACCEPT ALL COOKIES'
   privacy_title: 'Your Privacy'
   privacy_msg:
-    value: "<p>Your privacy text</p>\r\n"
+    value: "<p>When you visit any web site, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized web experience.</p>\r\n"
     format: basic_html
-  link: 'http://www.google.com'
+  link: 'https://www.kinect-consulting.com/privacy-center'

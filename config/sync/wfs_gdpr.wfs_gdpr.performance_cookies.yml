@@ -1,0 +1,13 @@
+uuid: ca9e7fb3-a75a-44c9-b6e0-f786102db2c5
+langcode: en
+status: true
+dependencies: {  }
+id: performance_cookies
+label: 'Performance Cookies'
+description:
+  value: " <p><span style=\"font-size: 18px;\"><strong>Google Tag Manager</strong></span></p>\r\n<p>These cookies enable Google Analytics software. It helps us take and analyze visitor information such as browser usage and new visitor numbers. That information helps us to improve the website experience and to improve our marketing efforts.</p>\r\n<p>&lt;script&gt;</p>\r\n<p>(function (w, d, s, l, i) {</p>\r\n<p>w[l] = w[l] || [];</p>\r\n<p>w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});</p>\r\n<p>var f = d.getElementsByTagName(s)[0], j = d.createElement(s),</p>\r\n<p>dl = l != 'dataLayer' ? '&amp;l=' + l : '';</p>\r\n<p>j.async = true;</p>\r\n<p>j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;</p>\r\n<p>f.parentNode.insertBefore(j, f);</p>\r\n<p>})(window, document, 'script', 'dataLayer', 'GTM-Code');</p>\r\n<p>&lt;/script&gt;</p>"
+  format: basic_html
+header_script: ''
+weight: -10
+body_script: ''
+domain: default

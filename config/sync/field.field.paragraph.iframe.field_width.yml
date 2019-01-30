@@ -1,0 +1,21 @@
+uuid: 1974c8f1-cad4-466b-9101-6943ceb90a6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_width
+    - paragraphs.paragraphs_type.iframe
+id: paragraph.iframe.field_width
+field_name: field_width
+entity_type: paragraph
+bundle: iframe
+label: Width
+description: 'iframe width in px or %'
+required: false
+translatable: false
+default_value:
+  -
+    value: 100%
+default_value_callback: ''
+settings: {  }
+field_type: string

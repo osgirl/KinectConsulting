@@ -3,11 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.generic_page
-id: node.generic_page.promote
+    - node.type.standard_content_page
+id: node.standard_content_page.promote
 field_name: promote
 entity_type: node
-bundle: generic_page
+bundle: standard_content_page
 label: 'Promoted to front page'
 description: ''
 required: false

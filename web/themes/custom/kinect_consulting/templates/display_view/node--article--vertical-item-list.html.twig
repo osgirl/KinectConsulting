@@ -1,0 +1,21 @@
+<div class="row article-vertical-item-list">
+  <div class="col-xs-12">
+    {{ content.field_image }}
+  </div>
+  <div class="col-xs-12">
+    <div class="article-created-and-category">
+      {{ content.getCreatedTime|date('U')|format_date('month_day') }} -
+      Category:
+      <a
+        href="articles?category={{ content.field_tags['#items'].getString() }}">
+        {{ content.field_tags.0 }}
+      </a>
+    </div>
+    <h2 class="article-title">
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+    <div class="article-content article-content-trimmed">
+      {{ content.body.0['#text']|striptags|slice(0, 400) ~ '...' }}
+    </div>
+  </div>
+</div>

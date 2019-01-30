@@ -1,0 +1,5 @@
+name: 'KC Custom'
+type: module
+description: 'This module provides custom functionality to kinect-consulting.com site.'
+core: 8.x
+package: 'Custom'

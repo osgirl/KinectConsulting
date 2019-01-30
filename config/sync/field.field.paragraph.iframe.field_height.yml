@@ -1,0 +1,21 @@
+uuid: 28d106a2-960f-4b97-904f-188253a169a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_height
+    - paragraphs.paragraphs_type.iframe
+id: paragraph.iframe.field_height
+field_name: field_height
+entity_type: paragraph
+bundle: iframe
+label: Height
+description: 'iframe height in px or %'
+required: false
+translatable: false
+default_value:
+  -
+    value: 100%
+default_value_callback: ''
+settings: {  }
+field_type: string

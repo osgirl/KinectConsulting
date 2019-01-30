@@ -3,27 +3,35 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.generic_page.body
-    - field.field.node.generic_page.field_hero
-    - field.field.node.generic_page.field_paragraphs
-    - node.type.generic_page
+    - field.field.node.standard_content_page.body
+    - field.field.node.standard_content_page.field_exclude_title_from_display
+    - field.field.node.standard_content_page.field_hero
+    - field.field.node.standard_content_page.field_paragraphs
+    - node.type.standard_content_page
   module:
     - paragraphs
     - path
     - text
-id: node.generic_page.default
+id: node.standard_content_page.default
 targetEntityType: node
-bundle: generic_page
+bundle: standard_content_page
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 3
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  field_exclude_title_from_display:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_hero:
     type: entity_reference_paragraphs
@@ -34,24 +42,24 @@ content:
       edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: hero_item
+      default_paragraph_type: _none
     third_party_settings: {  }
     region: content
   field_paragraphs:
     type: entity_reference_paragraphs
-    weight: 3
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
       add_mode: button
       form_display_mode: default
-      default_paragraph_type: image_text
+      default_paragraph_type: _none
     third_party_settings: {  }
     region: content
   path:
     type: path
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -59,7 +67,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 6
     region: content
     third_party_settings: {  }
   title:
@@ -75,3 +83,4 @@ hidden:
   promote: true
   sticky: true
   uid: true
+

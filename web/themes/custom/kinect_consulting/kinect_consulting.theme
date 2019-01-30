@@ -6,3 +6,38 @@
  *
  * Place your custom PHP code in this file.
  */
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function kinect_consulting_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'views_view__' . $variables['view']->element['#view_id'];
+  $suggestions[] = 'views_view__' . $variables['view']->element['#view_id'] . '_' . $variables['view']->current_display;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function kinect_consulting_theme_suggestions_views_exposed_form_alter(array &$suggestions, array &$variables) {
+  $suggestions[] = 'views_exposed_form__' . str_replace('-', '_', $variables['form']['#id']);
+  $suggestions[] = 'views_exposed_form__' . str_replace('-', '_', $variables['form']['#theme'][4]);
+
+  $path_matcher = Drupal::service('path.matcher');
+  if ($path_matcher->isFrontPage()) {
+    $append = '__front_page';
+    foreach ($suggestions as $suggestion){
+      $suggestions[] = $suggestion . $append;
+    }
+  }
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function kinect_consulting_theme_suggestions_form_alter(array &$suggestions, array $variables, $hook) {
+
+  if ($hook == 'form' & !empty($variables['element']['#id'])) {
+    $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+  }
+}

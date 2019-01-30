@@ -1,0 +1,25 @@
+uuid: 648a5a8e-dc2d-47d2-ba1b-7e02e4f81576
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a6ee86c3-59f2-49a9-9199-aed49b930f77'
+  module:
+    - block_content
+  theme:
+    - kinect_consulting
+id: footeraddresses
+theme: kinect_consulting
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:a6ee86c3-59f2-49a9-9199-aed49b930f77'
+settings:
+  id: 'block_content:a6ee86c3-59f2-49a9-9199-aed49b930f77'
+  label: 'Footer - Addresses'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

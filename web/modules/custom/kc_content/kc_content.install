@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall hooks.
+ */
+
+const YAML_CONTENT_DIRECTORY = '';
+
+/**
+ * Implements hook_install().
+ *
+ * @see system_install()
+ */
+function kc_content_install() {
+  $path = \Drupal::service('module_handler')
+    ->getModule('kc_content')->getPath() . YAML_CONTENT_DIRECTORY;
+  \Drupal::service('yaml_content.content_loader')
+    ->setContentPath($path);
+  $service = \Drupal::service('yaml_content.content_loader');
+  $service->loadContent('block_content_entity.yml');
+}

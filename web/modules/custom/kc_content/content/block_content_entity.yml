@@ -1,0 +1,57 @@
+- entity: "block_content"
+  type: "basic"
+  info: "Footer - Addresses"
+  uuid: "a6ee86c3-59f2-49a9-9199-aed49b930f77"
+  body:
+    - format: "full_html"
+      value: |
+        <div class="row footer-addresses">
+          <div class="col-md-2">
+            <div class="address-item">
+              <strong>Miami</strong><br/>
+              9800 NW 41st St. Suite 400<br/>
+              Miami, FL 33178<br/>
+              tel: 305.428.8255
+            </div>
+            <div class="address-item">
+              <strong>Tampa</strong><br/>
+              3000 Bayport Drive<br/>
+              Tampa, Florida 33607<br/>
+              tel: 305.428.8255
+            </div>
+            <div class="address-item">
+              <strong>Houston</strong><br/>
+              300 Flint Ridge<br/>
+              Webster, TX<br/>
+              tel: 305.428.8255
+            </div>
+            <div class="address-item">
+              <strong>Louisville</strong><br/>
+              9300 Shelbyville Rd Suite 1305<br/>
+              Louisville, KY<br/>
+              tel: 305.428.8255
+            </div>
+            <div class="address-item">
+              <strong>Minneapolis</strong><br/>
+              605 North Highway 169, Suite 100<br/>
+              Minneapolis, MN<br/>
+              tel: 305.428.8255
+            </div>
+          </div>
+          <div class="col-md-10">
+            <div class="address-item">
+              <strong>San Jose, Costa Rica</strong><br/>
+              Parque Empresarial Forum 2<br/>
+              Edificio #N, Piso 4<br/>
+              Santa Ana, San Jose, Costa Rica<br/>
+              tel: +506 2520 9300
+            </div>
+            <div class="address-item">
+              <strong>London, UK</strong><br/>
+              62 Buckingham Gate<br/>
+              London SW1E 6AJ<br/>
+              United Kingdom<br/>
+              tel: +44 207 808 5000
+            </div>
+          </div>
+        </div>

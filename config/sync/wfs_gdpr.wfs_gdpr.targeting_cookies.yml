@@ -1,0 +1,13 @@
+uuid: 2afb8ac8-0e26-4ff5-a246-bb6d557ae5a5
+langcode: en
+status: true
+dependencies: {  }
+id: targeting_cookies
+label: 'Targeting Cookies'
+description:
+  value: "<p><span style=\"font-size: 18px;\"><strong>Eloqua</strong></span></p>\r\n<p>These cookies enable Eloqua to analyze visitor information such as how many times a visitor views a page, the country they are visiting from, the site they visit, what is the status of the user in Eloqua, landing page visited, and also to track some Eloqua assets.</p>\r\n<p>&lt;script type=\"text/javascript\"&gt;</p>\r\n<p>var _elqQ = _elqQ || [];</p>\r\n<p>_elqQ.push(['elqSetSiteId', 'SITE ID']);</p>\r\n<p>_elqQ.push(['elqTrackPageView']);</p>\r\n<p>(function () {</p>\r\n<p>function async_load() {</p>\r\n<p>var s = document.createElement('script');</p>\r\n<p>s.type = 'text/javascript';</p>\r\n<p>s.async = true;</p>\r\n<p>s.src = '//img.en25.com/i/elqCfg.min.js';</p>\r\n<p>var x = document.getElementsByTagName('script')[0];</p>\r\n<p>x.parentNode.insertBefore(s, x);</p>\r\n<p>&nbsp;}</p>\r\n<p>if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);</p>\r\n<p>else if (window.attachEvent) window.attachEvent('onload', async_load);</p>\r\n<p>})();</p>\r\n<p>&lt;/script&gt;</p>\r\n"
+  format: basic_html
+header_script: ''
+weight: -10
+body_script: ''
+domain: default

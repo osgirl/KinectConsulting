@@ -1,19 +1,18 @@
-uuid: 20dfe070-d937-4065-bea6-069342abfdcc
+uuid: 35ff173c-d5b5-4be8-8418-cc0c16696772
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_paragraphs
-    - node.type.generic_page
+    - field.storage.node.field_hero
+    - node.type.standard_content_page
     - paragraphs.paragraphs_type.hero_item
-    - paragraphs.paragraphs_type.image_text
   module:
     - entity_reference_revisions
-id: node.generic_page.field_paragraphs
-field_name: field_paragraphs
+id: node.standard_content_page.field_hero
+field_name: field_hero
 entity_type: node
-bundle: generic_page
-label: Paragraphs
+bundle: standard_content_page
+label: Hero
 description: ''
 required: false
 translatable: false
@@ -24,13 +23,9 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      image_text: image_text
       hero_item: hero_item
     target_bundles_drag_drop:
-      image_text:
-        enabled: true
-        weight: 3
       hero_item:
         enabled: true
-        weight: 4
+        weight: 2
 field_type: entity_reference_revisions

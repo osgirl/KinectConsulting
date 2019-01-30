@@ -1,0 +1,10 @@
+uuid: 1917b1b8-e187-4b01-bcef-bad3b1a0353b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.vertical_item_list
+label: 'Vertical Item List'
+targetEntityType: node
+cache: true

@@ -1,0 +1,7 @@
+name: 'KC Content'
+type: module
+description: 'Import content for kinect-consulting.com site.'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - yaml_content

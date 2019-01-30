@@ -1,0 +1,109 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Cache\CacheBackendInterface;
+
+
+const CID_ARTICLES_CREATION_YEARS = 'kc_custom:articles:creation_years';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function kc_custom_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (isset($form['#id']) && $form['#id'] == 'views-exposed-form-blog-articles-articles-main-page') {
+
+    $options = &drupal_static(__FUNCTION__);
+    if (is_null($options)) {
+      $data = \Drupal::cache()->get(CID_ARTICLES_CREATION_YEARS);
+      if (!$data) {
+        $options = _kc_custom_articles_years();
+        $cache_tags = ['node:article:year'];
+        \Drupal::cache()
+          ->set(CID_ARTICLES_CREATION_YEARS, $options, CacheBackendInterface::CACHE_PERMANENT, $cache_tags);
+      }
+      else {
+        $options = $data->data;
+      }
+
+    }
+
+    $form['postdate']['year'] = [
+      '#type' => 'select',
+      '#options' => $options,
+      '#size' => NULL,
+      '#default_value' => 'all',
+      '#weight' => 2,
+    ];
+
+    $form['postdate']['month'] = [
+      '#type' => 'select',
+      '#options' => _kc_custom_months(),
+      '#size' => NULL,
+      '#default_value' => 'all',
+      '#weight' => 3,
+    ];
+
+    $form['author']['#weight'] = 4;
+
+  }
+}
+
+function _kc_custom_articles_years() {
+  $options['all'] = '- Year -';
+
+  $connection = \Drupal::database();
+  $query = $connection->select('node_field_data', 'nfd');
+  $query
+    ->condition('nfd.type', 'article')
+    ->condition('nfd.status', 1);
+  $query->addExpression('DISTINCT DATE_FORMAT(DATE_ADD(\'19700101\', INTERVAL nfd.created SECOND), \'%Y\')', 'years');
+  $query->orderBy('created', 'DESC');
+
+  $result = $query->execute()->fetchAllKeyed(0, 0);
+
+  return $options + $result;
+}
+
+function _kc_custom_months() {
+  return [
+    'all' => '- Month -',
+    '01' => 'Jan',
+    '02' => 'Feb',
+    '03' => 'Mar',
+    '04' => 'Apr',
+    '05' => 'May',
+    '06' => 'Jun',
+    '07' => 'Jul',
+    '08' => 'Aug',
+    '09' => 'Sep',
+    '10' => 'Oct',
+    '11' => 'Nov',
+    '12' => 'Dec',
+  ];
+}
+
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function kc_custom_node_presave(EntityInterface $entity) {
+  $bundle = $entity->bundle();
+  if ($bundle == 'article') {
+    $data = \Drupal::cache()->get(CID_ARTICLES_CREATION_YEARS);
+    if ($data) {
+      $options = $data->data;
+      $date = $entity->created->value;
+      if ($date) {
+        $date = new DrupalDateTime($date, new DateTimeZone('UTC'));
+        $year = $date->format('Y');
+        if (empty($options[$year])) {
+          $cache_tags = ['node:article:year'];
+          Cache::invalidateTags($cache_tags);
+        }
+      }
+    }
+  }
+}

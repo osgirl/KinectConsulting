@@ -3,11 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.generic_page
-id: node.generic_page.title
+    - node.type.standard_content_page
+id: node.standard_content_page.title
 field_name: title
 entity_type: node
-bundle: generic_page
+bundle: standard_content_page
 label: 'Page Title'
 description: ''
 required: true

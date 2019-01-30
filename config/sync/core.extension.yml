@@ -12,8 +12,10 @@ module:
   config: 0
   contact: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   dblog: 0
+  devel: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
@@ -24,6 +26,9 @@ module:
   help: 0
   history: 0
   image: 0
+  kc_content: 0
+  kc_custom: 0
+  kint: 0
   link: 0
   link_attributes: 0
   menu_export: 0
@@ -39,17 +44,17 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
   tour: 0
   update: 0
   user: 0
   views_ui: 0
   wfs_gdpr: 0
+  yaml_content: 0
   menu_link_content: 1
-  views: 10
-  ctools: 0
-  token: 0
   pathauto: 1
+  views: 10
   paragraphs: 11
   standard: 1000
 theme:

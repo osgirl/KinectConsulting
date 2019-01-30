@@ -1,0 +1,15 @@
+uuid: 2ca90ffa-2796-4e86-a891-3d7f36da75e9
+langcode: en
+status: true
+dependencies: {  }
+name: 290x195
+label: 290x195
+effects:
+  02528afc-6707-4b86-acc7-def0ef5a40b5:
+    uuid: 02528afc-6707-4b86-acc7-def0ef5a40b5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 290
+      height: 195
+      anchor: center-center
