@@ -28,5 +28,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_exclude_title_from_display: true
   field_hero: true
   field_paragraphs: true

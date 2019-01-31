@@ -1,11 +1,13 @@
-<iframe src="{{ content.field_url.0 | raw }}"
+<div class="iframe-wrapper">
+  <iframe src="{{ content.field_url.0 | raw }}"
 
-  {% if content.field_width.0 %}
-    width="{{ content.field_width.0 | raw }}"
-  {% endif %}
+    {% if content.field_width.0 %}
+      width="{{ content.field_width.0 | raw }}"
+    {% endif %}
 
-  {% if content.field_height.0 %}
-    height="{{ content.field_height.0 | raw }}"
-  {% endif %}
+    {% if content.field_height.0 %}
+      height="{{ content.field_height.0 | raw }}"
+    {% endif %}
 
-  frameborder="0"></iframe>
+    frameborder="0"></iframe>
+</div>

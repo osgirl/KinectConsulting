@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.standard_content_page
+    - paragraphs.paragraphs_type.content
     - paragraphs.paragraphs_type.hero_item
     - paragraphs.paragraphs_type.iframe
     - paragraphs.paragraphs_type.image_text
@@ -27,15 +28,19 @@ settings:
     target_bundles:
       image_text: image_text
       hero_item: hero_item
+      content: content
       iframe: iframe
     target_bundles_drag_drop:
       image_text:
         enabled: true
-        weight: -7
+        weight: -9
       hero_item:
         enabled: true
-        weight: -6
+        weight: -8
+      content:
+        enabled: true
+        weight: -7
       iframe:
         enabled: true
-        weight: -5
+        weight: -6
 field_type: entity_reference_revisions

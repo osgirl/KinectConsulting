@@ -14,9 +14,76 @@ const YAML_CONTENT_DIRECTORY = '';
  */
 function kc_content_install() {
   $path = \Drupal::service('module_handler')
-    ->getModule('kc_content')->getPath() . YAML_CONTENT_DIRECTORY;
+      ->getModule('kc_content')->getPath() . YAML_CONTENT_DIRECTORY;
   \Drupal::service('yaml_content.content_loader')
     ->setContentPath($path);
   $service = \Drupal::service('yaml_content.content_loader');
   $service->loadContent('block_content_entity.yml');
+  $service->loadContent('taxonomy_term_authors.yml');
+  $service->loadContent('taxonomy_term_categories.yml');
+  $service->loadContent('node_article_entity.yml');
+  $service->loadContent('node_standard_content_page_entity.yml');
+}
+
+/**
+ * Update content (Creates Home Page)
+ */
+function kc_content_update_8001() {
+  kc_content_install();
+}
+
+/**
+ * Update content (Set Internal URLs in Home Page)
+ */
+function kc_content_update_8002() {
+  _kc_content_delete('/kinect-consulting');
+  kc_content_install();
+}
+
+/**
+ * Update content (About Page)
+ */
+function kc_content_update_8003() {
+  _kc_content_delete('/about-kinect-consulting');
+  kc_content_install();
+}
+
+/**
+ * Update content (Contact page)
+ */
+function kc_content_update_8004() {
+  _kc_content_delete('/kinect-consulting-contact-us-form');
+  kc_content_install();
+}
+
+/**
+ * Update content (Home Page, removes empty <p> tags in body)
+ */
+function kc_content_update_8005() {
+  _kc_content_delete('/kinect-consulting');
+  kc_content_install();
+}
+
+/**
+ * Update content (Create Terms and Conditions page)
+ */
+function kc_content_update_8006() {
+  kc_content_install();
+}
+
+function _kc_content_delete($aliases) {
+  if (!is_array($aliases)) {
+    $aliases = [$aliases];
+  }
+  foreach ($aliases as $alias) {
+    $path = \Drupal::service('path.alias_manager')
+      ->getPathByAlias($alias);
+    $params = \Drupal\Core\Url::fromUri("internal:" . $path)
+      ->getRouteParameters();
+    $entity_type = key($params);
+    $node = \Drupal::entityTypeManager()
+      ->getStorage($entity_type)
+      ->load($params[$entity_type]);
+    $node->delete();
+  }
 }

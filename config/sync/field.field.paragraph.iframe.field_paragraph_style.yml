@@ -1,0 +1,21 @@
+uuid: 310b07ad-af18-48f6-9f28-6c81e4f1ab39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_style
+    - paragraphs.paragraphs_type.iframe
+  module:
+    - options
+id: paragraph.iframe.field_paragraph_style
+field_name: field_paragraph_style
+entity_type: paragraph
+bundle: iframe
+label: Style
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

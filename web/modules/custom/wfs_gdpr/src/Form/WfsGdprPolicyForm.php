@@ -241,7 +241,7 @@ class WfsGdprPolicyForm extends FormBase {
     $ip_address = $this->getRequest()->getClientIP();
     $timestamp = time();
     $accept_opt = [];
-    $domain_id = $this->negotiator->getActiveId();
+    $domain_id = isset($this->negotiator)?$this->negotiator->getActiveId() :  'default';
 
     // Get values from Form.
     foreach ($form_state->getValues() as $key => $value) {
@@ -252,12 +252,12 @@ class WfsGdprPolicyForm extends FormBase {
         }
       }
     }
-    // Saving to database.
-    $keys = [
+      // Saving to database.
+      $keys = [
       'ip_address' => $ip_address,
       'domain' => $domain_id,
     ];
-    $field  = [
+      $field  = [
       'domain' => $domain_id,
       'cookies_accepted' => serialize($accept_opt),
       'cookie_disable_banner' => 0,

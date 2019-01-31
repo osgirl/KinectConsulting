@@ -30,6 +30,16 @@ function kc_custom_form_views_exposed_form_alter(&$form, FormStateInterface $for
 
     }
 
+    $form['postdate'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => [
+          'post-date-wrapper',
+        ],
+      ],
+      '#weight' => 2,
+    ];
+
     $form['postdate']['year'] = [
       '#type' => 'select',
       '#options' => $options,

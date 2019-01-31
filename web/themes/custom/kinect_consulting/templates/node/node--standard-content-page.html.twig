@@ -92,7 +92,7 @@
     <div{{ content_attributes.addClass('content') }}>
         {{ content.field_hero }}
         <div class="copywide">
-        {% if not content.field_exclude_title_from_display|render|striptags|trim == 'True' %}
+        {% if content.field_exclude_title_from_display.0['#markup'] != 'True' %}
         {{ title_prefix }}
         <h1{{ title_attributes }}>{{ label }}</h1>
         {{ title_suffix }}

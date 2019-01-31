@@ -131,7 +131,7 @@
 
     var submitActor = null;
 
-    var $submitActors = $('#wfs-gdpr-policy-form').find('input[type=submit]');
+    var $submitActors = $('#wfs-gdpr-policy-form').find('input[type=submit],.form-submit');
 
     $submitActors.click(function (e) {
       submitActor = this;

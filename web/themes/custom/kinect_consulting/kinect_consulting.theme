@@ -41,3 +41,12 @@ function kinect_consulting_theme_suggestions_form_alter(array &$suggestions, arr
     $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function kinect_consulting_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $suggestions[] = 'page__node_type_' . $node->bundle();
+  }
+}

@@ -1,0 +1,565 @@
+- entity: "node"
+  type: "standard_content_page"
+  title: "Kinect Consulting"
+  status: 1
+  uid: 1
+  body:
+    - format: "full_html"
+      value: |
+        <div>
+        	<div class="rtecenter" style="font-size: 40px">
+        		Kinect Consulting helps companies <strong style="color:#00ACF2">transform</strong> and <strong style="color:#00ACF2">modernize</strong></div>
+        	<div class="rtecenter" style="font-size: 30px">
+        		to <strong style="color:#00ACF2">reduce time-to-market</strong>, overall <strong style="color:#00ACF2">cost</strong>, and <strong style="color:#00ACF2">uncertainty</strong></div>
+        	<div class="rtecenter" style="font-size: 30px">
+        		along&nbsp;their journey to the Cloud.</div>
+        </div>
+  field_exclude_title_from_display: 1
+  field_hero:
+    - entity: "paragraph"
+      type: "hero_item"
+      field_cta:
+        - uri: 'internal:/cloud-execution-framework'
+          title: 'LEARN ABOUT EXECUTIVE SERVICES'
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "Homepage1.jpg"
+          alt: "Homepage"
+    - entity: "paragraph"
+      type: "hero_item"
+      field_cta:
+        - uri: 'internal:/technical-services'
+          title: 'LEARN ABOUT TECHNICAL SERVICES'
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "homepage2.jpg"
+          alt: "Homepage"
+  field_paragraphs:
+    - entity: "paragraph"
+      type: "content"
+      field_body:
+        - format: "full_html"
+          value: |
+            <div class="row text-align-center">
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                  <p><img alt="" src="/themes/custom/kinect_consulting/images/391514-cloud-network-re.png" style="width: 150px; height: 150px;" /></p>
+                  <p><a href="https://www.kinect-consulting.com/cloud-execution-framework"><strong style="text-align: center;">Cloud Execution Framework</strong></a></p>
+                  <p>The journey to the Cloud is unique for every company. We’ve taken best practices from leading public cloud providers and built our Cloud Execution Framework – an iterative process to guide you on your specific journey.</p>
+              </div>
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                  <p><img alt="" src="/themes/custom/kinect_consulting/images/cloudgearoption.png" style="width: 150px; height: 150px;" /></p>
+                  <p><a href="https://www.kinect-consulting.com/technical-services"><strong>Cloud Technical Services</strong></a></p>
+                  <p>Your goal is highly secure, reliable, scaleable, performant, flexible and cost efficient solutions - our goal is to help you get there by designing for your unique business requirements.</p>
+              </div>
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                  <p><img alt="" src="/themes/custom/kinect_consulting/images/833580-checkmark-cloud-.png" style="width: 150px; height: 150px;" /></p>
+                  <p><a href="https://www.kinect-consulting.com/cloud-trusted-advisor"><strong>Cloud Trusted Advisor</strong></a></p>
+                  <p>The Cloud Trusted Advisor Service is a check point on your journey to the Cloud. It is important to verify that you are implementing best practices.</p>
+              </div>
+            </div>
+            <div class="row text-align-center">
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                  <p><img alt="" src="/themes/custom/kinect_consulting/images/833579-break-conflict-d.png" style="width: 150px; height: 150px;" /></p>
+                  <p><strong style="text-align: center;">Digital Transformation</strong></p>
+                  <p>Digital Transformation is about letting people leverage technological advancements to positively impact all aspects of business, and not just about the technology itself. It is about embracing the constant change and innovating to be a leader in your industry.</p>
+              </div>
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                  <p><img alt="" src="/themes/custom/kinect_consulting/images/364022-configuration-cu.png" style="width: 150px; height: 150px;" /></p>
+                  <p><strong>IT Modernization</strong></p>
+                  <p>Advancements in technology change people's expectations in terms of performance, efficiency, cost and maintainability of IT solutions. Modern technologies demand new approaches and development philosophy to take full advantage of cloud offerings. Let us help you on your IT modernization journey</p>
+              </div>
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                  <p><img alt="" src="/themes/custom/kinect_consulting/images/391492-earth-gear-globa.png" style="width: 150px; height: 150px;" /></p>
+                  <p><strong>Elastic Infrastructure</strong></p>
+                  <p>The ability of infrastructure to dynamically adapt to needed capacity is where the cloud really flexes its power. Elastic Scale means Elastic Cost. Are you taking advantage of the elastic cloud?</p>
+              </div>
+            </div>
+    - entity: "paragraph"
+      type: "hero_item"
+      field_title: "We know how to move an enterprise to the cloud because we’ve done it before."
+      field_text: "Let us show you the way. "
+      field_cta:
+        - uri: 'internal:/kinect-consulting-contact-us-form'
+          title: 'CONTACT US TO LEARN MORE'
+      field_paragraph_style: "dark"
+- entity: "node"
+  type: "standard_content_page"
+  title: "Kinect Consulting"
+  path:
+    - pathauto: false
+      alias: '/kinect-consulting'
+
+- entity: "node"
+  type: "standard_content_page"
+  title: "Cloud Execution Framework"
+  status: 1
+  uid: 1
+  body:
+    - format: "full_html"
+      value: |
+        <p>The journey to the Cloud is unique for every company. We’ve taken best practices from leading public cloud providers and built our Cloud Execution Framework – an iterative process to guide you on your specific journey using a proven pattern to success.<br />
+        	<br />
+        	Mapping the Journey is the first and most important part in the Cloud Execution Framework process. It starts with answering a few key questions.</p>
+        <ul>
+        	<li>
+        		Where are you today?</li>
+        	<li>
+        		Where do you want to go?</li>
+        	<li>
+        		What are your business priorities?</li>
+        	<li>
+        		What are the projects you want to move into the Cloud?</li>
+        	<li>
+        		When do you want these projects to be in the Cloud?</li>
+        	<li>
+        		Are there any restrictions (e.g. technology choices, customer commitments, regulatory, etc)?</li>
+        </ul>
+        <p>The journey to the Cloud does not look the same for every business. This initial exercise is to help you map the journey to your timeline and your priorities. Your business may have processes in place that make parts of the journey very simple, but you may also have gaps that will require more focus. The end result is an agreed-upon Roadmap of iterative processes.<br />
+        	<br />
+        	<strong>One Cloud Execution Framework, Six Unique ViewPoints</strong><br />
+        	Moving to the Cloud can be complex. The Cloud Execution Framework adds structure to the complexity by breaking it down into six easy-to-understand ViewPoints. ViewPoints are based on various stakeholders’ perspectives and address the objectives and concerns that come from relevant partners and team members.</p>
+  field_exclude_title_from_display: 0
+  field_hero:
+    - entity: "paragraph"
+      type: "hero_item"
+#      field_title: ""
+#      field_text: ""
+#      field_cta:
+#        - uri: 'http://www.kinect-consulting.com'
+#          title: 'CTA text'
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "aboutHero_0.jpg"
+          alt: "About Hero Image"
+  field_paragraphs:
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Management"
+      field_text: "The Management ViewPoint is focused on optimizing the business benefit from the Cloud. This ViewPoint is designed to help leadership understand the business changes needed to take full advantage of the Cloud and to make sure that IT investments are aligned with the business-required outcomes."
+      field_text_position: "left"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "CEFImage1.jpg"
+          alt: "Cloud Execution Framework"
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Organizational"
+      field_text: "The Organizational ViewPoint is all about people. Moving into the Cloud may require changes to organizational structures. There may be a deficit of staff skills and competencies. Depending on the level of change the Cloud creates, change management could be a crucial part of the process. This ViewPoint assists in understanding what is needed and when."
+      field_text_position: "right"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "CEFImage2.jpg"
+          alt: "Cloud Execution Framework"
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Governance"
+      field_text: "The Governance ViewPoint is an essential and often neglected part of the Cloud Execution Framework. As businesses move to the Cloud, this ViewPoint helps you understand how to control access, sprawl, and costs within the cloud environment."
+      field_text_position: "left"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "CEFImage3.jpg"
+          alt: "Cloud Execution Framework"
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Technology"
+      field_text: "Technology is the enabler of this journey. There are many options, many directions, and many choices. The focus of the Technology ViewPoint is to help you make the right decisions for your business and define a technical architecture that best fits your needs."
+      field_text_position: "right"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "CEFImage4.jpg"
+          alt: "Cloud Execution Framework"
+- entity: "node"
+  type: "standard_content_page"
+  title: "Cloud Execution Framework"
+  path:
+    - pathauto: false
+      alias: '/cloud-execution-framework'
+
+- entity: "node"
+  type: "standard_content_page"
+  title: "Technical Services"
+  status: 1
+  uid: 1
+  body:
+    - format: "full_html"
+      value: |
+        <p>Our core technical expertise is designing highly secure, reliable, scaleable, performant, flexible and cost efficient architectures for the cloud. Our goal is not to provide a unique service, but to provide the right solution for your unique business requirements.</p>
+  field_exclude_title_from_display: 0
+  field_hero:
+    - entity: "paragraph"
+      type: "hero_item"
+      #      field_title: ""
+      #      field_text: ""
+      #      field_cta:
+      #        - uri: 'http://www.kinect-consulting.com'
+      #          title: 'CTA text'
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "techherotemp.jpg"
+          alt: "tech hero"
+  field_paragraphs:
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Breaking the monolith"
+      field_text: "Are you considering or in the initial stages of digital transformation? Do you struggle with scalability and availability of your applications? Has it become increasingly more difficult to deploy and scale your systems? It's not the question of \"if\", but rather the question of \"when\" traditional \"monolith\" application architecture will start costing you business. Let us help you jumpstart your digital transformation the right way, using micro-services based architecture and DevOps best practices."
+      field_text_position: "left"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "techimage1.jpg"
+          alt: "Technical Services"
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Hybrid Architecture"
+      field_text: "Are you trying to test the waters with public cloud? Do you want to offload some of your technology to the public cloud? Have you outgrown your on-premise environments? Do you run weekly or monthly large scale processes and keep a lot of resources idle between the runs? Les us help you define the right architecture for your hybrid cloud initiative."
+      field_text_position: "right"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "techimage2.jpg"
+          alt: "Technical Services"
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Micro-services, Event Sourcing and CQRS"
+      field_text: "Are you exploring ways to streamline development and deployment process? Do you want your services to scale independently? Do you have strict auditing requirements? Is your write load much higher than your read load or vice versa? Micro-services in conjunction with event sourcing and CQRS will solve all the above requirements. But doing this right is not trivial. Each use case requires specific design patterns and trade-offs. Let us help you jumpstart your new flexible architecture."
+      field_text_position: "left"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "image4.jpg"
+          alt: "Technical Services"
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Big/Fast Data and Analytics"
+      field_text: "Big/fast data is no longer just a bunch of buzzwords. Businesses that don't collect all the data, all the time and don't capitalize on that data may be losing their competitive advantage. Ingesting large volumes of data from multiple sources at real time, enriching, cleansing and sanitizing, analyzing and storing results for immediate consumption by various business units, customers and partners is not an easy endeavor. We know what it takes to build the right data pipeline without going overboard, while allowing your data platform to evolve as your business needs change."
+      field_text_position: "right"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "image3.jpg"
+          alt: "Technical Services"
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Serverless Architecture"
+      field_text: "Serverless architectures are starting to make their way to both public and private clouds. Deciding on which use cases fit this paradigm is very important. Businesses should start slowly, one use case at a time. Let us guide you through this new and exciting architectural approach."
+      field_text_position: "left"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "techimage1.jpg"
+          alt: "Technical Services"
+- entity: "node"
+  type: "standard_content_page"
+  title: "Technical Services"
+  path:
+    - pathauto: false
+      alias: '/technical-services'
+
+- entity: "node"
+  type: "standard_content_page"
+  title: "Cloud Trusted Advisor"
+  status: 1
+  uid: 1
+  body:
+    - format: "full_html"
+      value: |
+        <p>In addition to our <a href="https://www.kinect-consulting.com/cloud-execution-framework" target="_blank">Cloud Execution Framework</a>, we offer our Cloud Trusted Adviser Service. The Cloud Trusted Advisor Service is a check point on your journey to the Cloud.<br />
+        	<br />
+        	It is important to verify that you are implementing best practices. Or you may be ready to take the next step after an initial cloud project. The Cloud Trusted Advisor Service allows you to pull from a team of experts to verify you are on the intended path.<br />
+        	<br />
+        	The Cloud Trusted Advisor Service can be customized for your needs, but here are some of the primary services:</p>
+  field_exclude_title_from_display: 0
+  field_hero:
+    - entity: "paragraph"
+      type: "hero_item"
+      #      field_title: ""
+      #      field_text: ""
+      #      field_cta:
+      #        - uri: 'http://www.kinect-consulting.com'
+      #          title: 'CTA text'
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "TustedAdvisor.jpg"
+          alt: "Trusted Advisor"
+  field_paragraphs:
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Strategy Review"
+      field_text: "Do you have a cloud strategy? Many companies don’t, many have parts of one, or maybe you realize a review with an expert is needed to validate the strategy is really meeting the business goals. Don’t guess! Let us help you create or validate your strategy.What are the challenges or concerns with your current strategy? Often companies don’t know where to start. We can help.Do you have a Well Defined and actionable direction? You will when you are done with the Cloud Trusted Advisor! We help you build a go forward strategy and the steps you need to take to implement."
+      field_text_position: "left"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "TrustedAdvisor2.jpg"
+          alt: "Cloud Trusted Advisor"
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Cloud Maturity Assessment"
+      field_text: "Do you understand what a mature Cloud execution would look like for your organization? Do you understand where you are in the process? How far along are you? We work with companies of all sizes and we can help you understand where you rate in overall cloud maturity."
+      field_text_position: "right"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "TrustedAdvisor3.jpg"
+          alt: "Cloud Trusted Advisor"
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Architecture Review"
+      field_text: "Are you taking advantage of Cloud architectures? Designing applications to take advantage of the elasticity and automation available in the Cloud takes a different set of skills. The ability to scale up and down can be easily automated in the Cloud, but can your application architecture handle this new found auto-scaling?"
+      field_text_position: "left"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "TrustedAdvisor4.jpg"
+          alt: "Cloud Trusted Advisor"
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Security Review"
+      field_text: "Security teams have a really good understanding on how to secure a data center. Security teams without Cloud experience say “No” a lot! Let us help you get the team to “YES”. Cloud security is different. Some things are easier, however, there are new places to watch. We will help you build a cloud security policy to take the velocity of the cloud in to account."
+      field_text_position: "right"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "TrustedAdvisor12.jpg"
+          alt: "Cloud Trusted Advisor"
+    - entity: "paragraph"
+      type: "image_text"
+      field_title: "Cost Analysis"
+      field_text: "One of the most interesting things about Cloud platforms today is that they are actually getting less expensive over time. There are many ways to implement Cloud platforms at a lower cost than just 2 years ago. Let us help your teams design for cost optimization. One really big change the Cloud enables, is very detailed cost visibility. We will show you how to see cost better, design to improve cost, and even make applications cost aware!"
+      field_text_position: "left"
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "TrustAdvisor5.jpg"
+          alt: "Cloud Trusted Advisor"
+- entity: "node"
+  type: "standard_content_page"
+  title: "Cloud Trusted Advisor"
+  path:
+    - pathauto: false
+      alias: '/cloud-trusted-advisor'
+
+- entity: "node"
+  type: "standard_content_page"
+  title: "About Us"
+  status: 1
+  uid: 1
+  field_exclude_title_from_display: 0
+  field_hero:
+    - entity: "paragraph"
+      type: "hero_item"
+      #      field_title: ""
+      #      field_text: ""
+      #      field_cta:
+      #        - uri: 'http://www.kinect-consulting.com'
+      #          title: 'CTA text'
+      field_image:
+        - "#process":
+            callback: "file"
+            args:
+              - "image"
+              - filename: "aboutHero_0.jpg"
+          alt: "About Hero Image"
+  field_paragraphs:
+    - entity: "paragraph"
+      type: "content"
+      field_paragraph_style: "color-verypale"
+      field_body:
+        - format: "full_html"
+          value: |
+            <div style="margin-left:24%;margin-right:24%">
+                <h1>
+                    What We Do</h1>
+                <p><span style="font-family: arial, helvetica, sans-serif; font-size: 14px;">The Cloud has brought a lot of change to modern IT. &nbsp;No longer limited by the capital outlay for hardware, data centers, and the need to manually manage infrastructure, the Cloud has brought an elasticity and automation to the IT world that we have never seen before. &nbsp;Old ways of architecting and developing applications no longer apply in this new dynamic.</span></p>
+                <p><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Kinect Consulting offers application architecture consulting and development for medium to large companies that are looking for specific experience in moving an enterprise to the Cloud.</span></span></p>
+                <p>&nbsp;</p>
+                <h1>
+                    About Kinect Consulting</h1>
+                <p><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;">Kinect Consulting was formed by spinning off the IT Architecture and Strategy leadership from a Fortune 100 company, World Fuel Services. &nbsp;Word Fuel Service, had embarked on a leading-edge journey to developing software specifically to take advantage of both Native and Hybrid Cloud services. This was not a journey of "lift and shift" to the Cloud, this was a journey of taking full advantage of all the Public Cloud has to offer as a platform. World Fuel Services is Kinect Consulting's largest client.</span></span></p>
+            </div>
+            <p>&nbsp;</p>
+    - entity: "paragraph"
+      type: "content"
+      field_body:
+        - format: "full_html"
+          value: |
+            <h1 class="rtecenter">
+              <span style="font-size:36px;"><span style="font-family:arial,helvetica,sans-serif;"><strong>Leadership Team</strong></span></span></h1>
+              <table align="center" border="5" cellpadding="5" cellspacing="5" class="two-cols non-style" style="width: 80%; margin: 0 auto;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <p align="left"><img align="left" src="/themes/custom/kinect_consulting/images/Aaron-Moore.jpg" style="width: 200px; height: 200px;padding: 0 12px 8px 0;" />Aaron Moore brings 26 plus years of multifaceted IT experience to Kinect Consulting. Starting his career at IBM at age 20, Aaron has experience in nearly all aspects of IT, from networking, hardware, operations, and development, add project management, databases, and executive leadership to the mix. It’s hard to find a more well-rounded tech leader. Aaron founded his first tech consulting startup in 1993, and later worked in IT leadership for some of the most respected companies in the world including E.ON, GE, and Electronic Arts. Aaron’s strength is in his passion for business solutions, bringing knowledge of several industries including energy, manufacturing, distribution, electric and gas utilities, trading and risk management, and hospitality.</p>
+                            <p class="rtejustify">Aaron has assisted many organizations with application modernization cycles over his career, working not only on the technical aspects, but also helping business leaders understand the impact technology changes will have on their organization.</p>
+                            <p class="rtejustify">As the leader and Vice President of World Fuel Services Architecture team, he led the company’s transformation into the Cloud and completely changed how applications were designed, developed, and deployed. With a focus on reducing time-to-market and overall cost, Aaron implemented a new open source stack, and introduced the concepts and culture of DevOps automation into the organization as part of their journey to the Cloud.</p>
+                            <p class="rtejustify">After spinning off Kinect Consulting from World Fuel, Aaron’s attention is on building a customer focused organization of technical thought leaders with the goal of assisting companies on their journey to the Cloud and onto the next technical revolution.</p>
+                        </td>
+                        <td>
+                            <p align="left"><img align="left" src="/themes/custom/kinect_consulting/images/Igor-Royzis.jpg" style="width: 200px; height: 200px;padding: 0 12px 8px 0;" /> Igor Royzis has over 20 years of Fortune 100 and startup experience delivering and managing solutions for Software, Investment Banking, Trading, Portfolio Risk Management, Mergers &amp; Acquisitions, E-commerce, Wholesale and Distribution industries. He is passionate about guiding enterprises in their technology transformation journey, building complex software platforms, designing web, mobile and data solutions, turning ideas into reality, and helping businesses choose and apply appropriate tools and technologies to successfully grow, compete and succeed.</p>
+                            <p class="rtejustify">Igor Royzis pioneered the use of open source technologies at Chase Manhattan Bank and designed the first Service Oriented Architecture based platform at Merrill Lynch. He started his own technology consulting company in 2001 and designed and built several sophisticated financial trading platforms and risk management systems for Bank of America, Merrill Lynch and Lehman Brothers. As CTO, Igor Royzis has successfully built three technology and consulting startups since 2005. He co-founded and built world’s largest Mergers &amp; Acquisitions platform, DealNexus, in 2012, which consequently was acquired by a NYSE traded public company. In 2015, Igor Royzis was retained by the CIO of World Fuel Services, a Fortune 100 company, to lead an ambitious and complex re-architecture initiative as part of company’s Digital Transformation. He successfully designed World Fuel’s new cloud native architecture and guided development teams through implementation on Amazon Web Services public cloud.</p>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+              <p>&nbsp;</p>
+- entity: "node"
+  type: "standard_content_page"
+  title: "About Us"
+  path:
+    - pathauto: false
+      alias: '/about-kinect-consulting'
+
+- entity: "node"
+  type: "standard_content_page"
+  title: "Kinect Consulting Contact Us Form"
+  status: 1
+  uid: 1
+  body:
+    - format: "full_html"
+      value: |
+        <p class="rtecenter"><span style="font-size:24px;">Contact Information</span></p>
+  field_exclude_title_from_display: 1
+  field_paragraphs:
+    - entity: "paragraph"
+      type: "iframe"
+      field_url:
+        - uri: 'https://mail-wfscorp.com/kinectconsulting-contactus'
+      field_width: "1110"
+      field_height: "900"
+- entity: "node"
+  type: "standard_content_page"
+  title: "Kinect Consulting Contact Us Form"
+  path:
+    - pathauto: false
+      alias: '/kinect-consulting-contact-us-form'
+
+- entity: "node"
+  type: "standard_content_page"
+  title: "Kinect Consulting Terms and Conditions"
+  status: 1
+  uid: 1
+  field_exclude_title_from_display: 1
+  field_paragraphs:
+    - entity: "paragraph"
+      type: "content"
+      field_body:
+        - format: "full_html"
+          value: |
+            <p style="margin: 0px 0px 1rem; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif;"><span style="color: rgb(20, 36, 65);">This Web Site,</span><font color="#0000ff">&nbsp;<a href="http://www.kinect-consulting.com">www.kinect-consulting.com</a></font><font color="#142441">&nbsp;(the "Site"), is offered and made available to you ("User" or "you"), conditioned on your acceptance without modification of the terms, conditions, and notices contained herein, as the same shall constitute a binding agreement (the "Agreement") between WORLD FUEL SERVICES CORPORATION ("WFS") and you. By accessing and using this Site, you agree to be bound to all such terms, conditions, and notices set forth in this Agreement. If you do not accept these terms and conditions, you must not access or use the Site in any manner. IF YOU ARE DISSATISFIED WITH THE TERMS, CONDITIONS, RULES, POLICIES, GUIDELINES OR PRACTICES OF THE SITE, YOUR SOLE AND EXCLUSIVE REMEDY IS TO DISCONTINUE USING THE SITE. WFS may revise this Agreement at any time by updating this posting. Use of the Site after such changes are posted will signify and constitute your agreement to these revised terms. You should visit this page periodically to review this Agreement. &nbsp;Any rights not expressly granted herein are expressly reserved by WFS.</font></p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);"><strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">I. PERMITTED USE OF THE SITE</span></strong></p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(a) The User represents and warrants that he or she possesses the legal right and ability to enter into this Agreement and to use the Site in accordance with all terms and conditions herein. The User further agrees to be financially responsible for all use of the Site. The User may not assign, transfer or sublicense his/her rights and obligations pursuant to this Agreement to any third party.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(b) The Site is for the User’s personal, non-commercial use only. The User agrees not to modify, copy, alter, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell any information, software, products or services obtained from the Site, whether in whole or in part, without WFS’ prior written approval.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(c) The User agrees not to use any robot, spider, other automatic device, or manual process to monitor or copy the Site or the Content (as defined below) contained therein or for any other unauthorized purpose without WFS’ prior written permission. The User agrees not to use any device, software or routine to interfere with or attempt to interfere with the proper working of the Site or any activities conducted thereon. The User agrees not to take any action that imposes an unreasonable or disproportionately large load on WFS’ infrastructure, bandwidth and hosting capabilities. WFS reserves the right to investigate any illegal and/or unauthorized use of the Site, including, but not limited to, unauthorized framing of the Site or unauthorized use of any robot, spider or other automated device, and to take appropriate legal action, including, without limitation, civil, criminal and injunctive redress.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);"><strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">II. COPYRIGHT AND TRADEMARK NOTICES; OWNERSHIP</span></strong></p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(a) All Content of the Site is: Copyright© 2003-2016&nbsp;WORLD FUEL SERVICES CORP. and/or its suppliers, 9800 N.W. 41st Street, Miami, FL 33178, U.S.A. All rights reserved.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(b) WORLD FUEL SERVICES and any other names, logos, designs or marks of WFS referenced on the Site are the service marks or registered service marks of WFS. Unless otherwise indicated, all service marks, trademarks, and logos, whether registered or not, as well as trade dress, located on the Site are the sole and exclusive property of WFS. Other product and company names mentioned herein may be the trademarks of their respective owners.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(c) All materials displayed or otherwise accessible through the Site, including, without limitation, news articles, text, photographs, images, illustrations, audio clips, video clips, computer software and code (collectively, the "Content") are protected under United States and foreign copyright or other laws, and are owned by WFS, its licensors or the party accredited as the provider of the Content. In addition, the Site is protected under copyright law as a collective work and/or compilation pursuant to United States and foreign laws. You shall abide by all additional copyright notices, information and restrictions on or contained in any of the Content accessed through the Site.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);"><strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">III. CURRENCY CONVERSION</span></strong></p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">From time to time, the Site may provide and list fees, rates and prices for WFS’ goods, offerings, products and services. &nbsp;If and to the extent prices are set forth in United States currency, such rates are based on various publicly available sources. Rates are not verified as accurate, and actual rates may vary. Currency quotes, if available, are not updated every day. &nbsp;The information supplied by WFS is believed to be accurate, but WFS and/or its suppliers do not warrant or guarantee such accuracy. When using this information for any financial purpose, WFS advises the User to consult a qualified professional to verify the accuracy of the currency rates. WFS and/or its suppliers do not authorize the use of this information for any other purposes, except for personal use, and prohibit to the maximum extent permitted by applicable law the resale, redistribution, and use of this information for commercial purposes.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);"><strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">IV. FORWARD LOOKING STATEMENTS</span></strong></p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">The Site contains forward-looking statements concerning WFS. These forward-looking statements only speak as of the date indicated or, if no such date is indicated, as of the date such statements are posted to the Site. Actual results could differ materially from those described in any forward-looking statements. Please read WFS’ filings,&nbsp;<a href="https://ir.wfscorp.com/phoenix.zhtml?c=101792&amp;p=irol-sec" style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; color: rgb(15, 196, 119); text-decoration: none; cursor: pointer; transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, border-color 0.1s ease-in-out;">https://ir.wfscorp.com/phoenix.zhtml?c=101792&amp;p=irol-sec</a>, including its annual, periodic and current reports, as amended, for additional information about the risks, uncertainties and other factors that could cause actual results to differ materially from those in the forward-looking statements. WFS expressly disclaims any obligation to update, amend, supplement or otherwise revise any forward-looking statements contained in the Site to reflect events or circumstances that may arise after the date indicated, except as otherwise required by applicable law.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);"><strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">V. LINKS TO THIRD PARTY SITES</span></strong></p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">The Site may contain links and pointers to Internet sites maintained by third parties. WFS does not operate or control in any respect any information, products or services on such third-party sites. Third party links and pointers are included solely for the convenience of users, and do not constitute any endorsement by WFS and/or its suppliers. You assume sole responsibility for use of third party links and pointers.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);"><strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">VI. USE OF INFORMATION</span></strong></p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(a) The manner by which WFS manages the privacy of its users’ information is set forth in the WFS Privacy Policy which can be accessed here.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(b) Any communications the User sends to the Site or otherwise to WFS by electronic mail are on a non-confidential basis at all times, and WFS is under no obligation to refrain from reproducing, publishing or otherwise using such communications in any way and for any purpose. WFS shall be free to use the content of such electronic mail communications, including any ideas, inventions, concepts, techniques or know-how disclosed therein, for any purpose, including the developing, manufacturing and/or marketing of goods or services, and no consideration whatsoever shall be due the User arising from WFS’ use of same</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(c) The information provided on the Site is provided solely for reference and informational purposes, and should not be relied upon in connection with any investment decision. The information provided on the Site does not constitute an offer to sell or the solicitation of an offer to buy any securities.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(d) In addition to the foregoing, the information contained on the Site is not intended to provide legal, accounting, tax, investment, financial, medical or other advice to you,and you should not rely upon the information to provide any such advice.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);"><strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">VII. USE OF INTERACTIVE SITE FEATURES</span></strong></p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(a) To the extent the Site contains bulletin boards, chat rooms, surveys, feedback pages or other communication facilities (collectively, "forums"), the User agrees to use such forums only to send and receive messages and material that are proper and related to the particular forum. By way of example, and not as a limitation, the User agrees that when using a forum, the User shall not:</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">Defame, abuse, harass, stalk, threaten or otherwise violate the legal rights (such as rights of privacy and publicity) of others.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">Publish, post, distribute or disseminate any defamatory, infringing, obscene, indecent or unlawful material or information.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">Upload files that contain software or other material protected by intellectual property laws (or by rights of privacy of publicity) unless the User owns or controls the rights thereto or has received all necessary consents.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">Upload files that contain viruses, corrupted files, or any other similar software or programs that may damage the operation of another’s computer.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">Delete any author attributions, legal notices or proprietary designations or labels in any file that is uploaded.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">Falsify the origin or source of software or other material contained in a file that is uploaded.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">Advertise or offer to sell any goods or services, or engage in surveys, contests, chain letters or for any commercial purpose.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">Download any file that the User knows, or reasonably should know, cannot be legally distributed via the Site.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(b) The User agrees to (as available) send and receive electronic mail, engage in conferences and chats, download and upload files, and otherwise use the Site only as permitted by these terms and conditions, any additional policies or procedures published in the Site from time to time by WFS, and in accordance with applicable law. WFS reserves the right for any reason to remove without notice any Content from the Site, including without limitation, information posted by users on any of the forums made available by WFS.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(c) WFS reserves the right to deny, in its sole discretion, any user access to the Site or any portion thereof without notice. WFS reserves the right to edit any notices or postings for clarity and length. The User acknowledges that chats, conferences, bulletin boards and any other such communications forums hosted by and made available on the Site are public and not private communications. Further, the User acknowledges that chats, postings, conferences, and other communications by other users are not endorsed by WFS, and such communications shall not be considered reviewed, screened, or approved by WFS.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(d) By posting or uploading any submissions to the Site, the User grants WFS a royalty-free, perpetual, non-exclusive, irrevocable, unrestricted, worldwide license to:</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(i) use, reproduce, store, adapt, translate, modify, make derivative works from, transmit, distribute, publicly perform or display such submissions for any purpose; and</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(ii) to sublicense to third parties the unrestricted right to exercise any of the foregoing rights. In addition to the grant of the above license, the User hereby (A) agrees to waive all moral rights in any submission in favor of WFS; (B) consents to his/her name, address and e-mail appearing as the contributor of any submission, where applicable, and to the disclosure and/or display of such information and any other information which appears in or is associated with a submission; (C) acknowledges and agrees that WFS is not responsible for any loss, damage, or corruption that may occur to the User’s submissions; and (D) acknowledges and agrees that any submissions he/she delivers to WFS and/or display on or via the Site will be considered non-confidential.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);"><strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">VIII. INDEMNIFICATION</span></strong></p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">As a condition of use of the Site, the User agrees to indemnify WFS, its officers, directors, employees, agents and suppliers from and against any and all liabilities, expenses (including attorney’s fees) and damages arising out of claims resulting from the User’s use of the Site, including without limitation, any claims alleging facts that if true would constitute a breach by the User of these terms and conditions.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);"><strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">IX. DISCLAIMER; LIMITATION OF LIABILITY</span></strong></p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(a)&nbsp;The information, software, products, and services published on the Site may include inaccuracies or typographical errors. Changes are periodically added to the information herein. WFS and/or its suppliers may make improvements and/or changes in or to the Site at any time. WFS and/or its suppliers make no representations about the suitability of the information, software, products, and services contained on the Site for any purpose. All such information, software, products, and services are provided "as is" and "as available" without warranty of any kind.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(b)&nbsp;WFS and/or its suppliers hereby disclaim all warranties and conditions with regard to this information, software, products, and services, including all implied warranties and conditions of merchantability, fitness for a particular purpose, title and non-infringement. &nbsp; BY ACCESSING AND USING THE SITE, YOU ACKNOWLEDGE AND AGREE THAT USE OF THE SITE AND THE CONTENT IS ENTIRELY AT YOUR OWN RISK.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(c)&nbsp;SUBJECT TO APPLICABLE LAW, IN NO EVENT SHALL WFS, ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, LICENSORS OR THEIR RESPECTIVE SUCCESSORS AND ASSIGNS, BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES OF ANY KIND, INCLUDING, WITHOUT LIMITATION, ANY LOSS OR DAMAGES IN THE NATURE OF OR RELATING TO LOST BUSINESS, LOST SAVINGS, LOST DATA AND/OR LOST PROFITS, REGARDLESS OF THE CAUSE AND WHETHER ARISING IN CONTRACT (INCLUDING FUNDAMENTAL BREACH), TORT (INCLUDING NEGLIGENCE) OR OTHERWISE RELATED TO THE USER’S USE OF THE SITE. THE FOREGOING LIMITATION SHALL APPLY EVEN IF WFS KNEW OF OR OUGHT TO HAVE KNOWN OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(d) IN NO EVENT SHALL WFS, ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, LICENSORS OR THEIR RESPECTIVE SUCCESSORS AND ASSIGNS, BE LIABLE FOR DAMAGES UNDER THIS AGREEMENT, WHETHER ARISING IN CONTRACT (INCLUDING FUNDAMENTAL BREACH), TORT (INCLUDING NEGLIGENCE) OR OTHERWISE, EXCEEDING ONE HUNDRED (US$100.00) U.S. DOLLARS EVEN IF WFS HAS BEEN ADVISED OR OUGHT TO HAVE KNOWN OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(e) WFS HEREBY EXPRESSLY DISCLAIMS ANY AND ALL LIABILITY FOR THE ACTS, OMISSIONS OR CONDUCT OF ANY THIRD-PARTY USER OF THE SITE OR ANY ADVERTISER OR SPONSOR OF THE SITE (COLLECTIVELY, "THIRD-PARTY USER"). UNDER NO CIRCUMSTANCES SHALL WFS AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS LICENSORS, BE LIABLE FOR ANY INJURY, LOSS, DAMAGE (INCLUDING SPECIAL, INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES) OR EXPENSE ARISING IN ANY MANNER WHATSOEVER FROM (I) THE ACTS, OMISSIONS OR CONDUCT OF ANY THIRD-PARTY USER; AND (II) ANY USE OR INABILITY TO USE ANY MATERIALS, SOFTWARE, CONTENT, GOODS OR SERVICES LOCATED AT OR MADE AVAILABLE AT ANY WEB SITE LINKED TO OR FROM THE SITE.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);"><strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">X. EXPORT RESTRICTIONS</span></strong></p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(a) The User may not access, download, use or export the Site, or the Content provided on or through the Site, in violation of U.S. export laws or regulations, or in violation of any other applicable laws or regulations.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(b) The User agrees to comply with all export laws and restrictions and regulations of any United States or foreign agency or authority, and not to directly or indirectly provide or otherwise make available the services and products of WFS in violation of any such restrictions, laws or regulations, or without all necessary approvals, including, without limitation, for the development, design, manufacture or production of nuclear, chemical or biological weapons of mass destruction and of missile technology. Neither the services, products or offerings of WFS nor the underlying information or technology contained within the Site may be downloaded or otherwise provided or made available, either directly or indirectly, (a) into Cuba, Iran, North Korea, Sudan, Syria or any other country subject to U.S. trade sanctions, to individuals or entities controlled by such countries, or to nationals or residents of such countries other than nationals who are lawfully admitted permanent residents of countries not subject to such sanctions; or (b) to anyone on the U.S. Treasury Department’s list of Specially Designated Nationals and Blocked Persons or the U.S. Commerce Department’s Table of Denial Orders. By agreeing to this Agreement, the User agrees to the foregoing and represents and warrants that he/she is not located in, under the control of, or a national or resident of any such country or on any such list.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);"><strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">XI. COPYRIGHT NOTICES</span></strong></p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(a) WFS respects the intellectual property rights of others, and it asks users using the Site to do the same. If you believe that your copyrighted work has been copied and is accessible on the Site in a way that constitutes copyright infringement, please send a written notice to WFS’ Copyright Agent providing the following information:</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">The electronic or physical signature of the owner of the copyright or the person authorized to act on the owner’s behalf</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">A description of the copyrighted work that you claim has been infringed and a description of the infringing activity</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">A description of where the material that you claim is infringing is located, such as the URL where it is posted</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">Your name, address, telephone number, and email address</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">A statement by you that you have a good faith belief that the disputed use of the material is not authorized by the copyright owner, its agent, or the law</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">A statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or are authorized to act on the copyright owner’s behalf</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">WFS Copyright Agent for notice of claims of copyright infringement can be reached as follows:</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);"><strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">WORLD FUEL SERVICES</span></strong><br style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: top; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box;" />
+            	9800 N.W. 41st Street<br style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: top; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box;" />
+            	Miami, FL 33178<br style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: top; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box;" />
+            	<strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">Attention:&nbsp;</span></strong>General Counsel</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);"><strong><span style="margin: 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: ProximaNovaBold, Arial, Helvetica, sans-serif;">XII. GENERAL</span></strong></p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(a) &nbsp; WFS reserves the right to make any and all changes to the Site at its sole discretion without notice to the User.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(b) &nbsp; WFS reserves the right to deny access to the Site to anyone at anytime.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(c) &nbsp; This Agreement shall be deemed to include all other notices, policies, disclaimers, and other terms contained on the Site; provided, however, that in the event of a conflict between such other terms and the terms of this Agreement, the terms of this Agreement shall control.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(d) &nbsp; This Agreement is governed by the laws of the State of Florida, U.S.A., without reference to conflicts of laws provisions. The User consents to the exclusive jurisdiction and venue of courts in Miami County, Florida U.S.A. for all disputes arising out of or relating to the use of the Site.</p>
+            <p style="margin: 1rem 0px; padding: 0px; border: 0px; outline: none; vertical-align: baseline; background-size: contain; background-position: center center; background-repeat: no-repeat; box-sizing: border-box; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16.128px; line-height: 1.4; font-family: ProximaNova, Arial, Helvetica, sans-serif; color: rgb(20, 36, 65);">(e) &nbsp; Use of the Site is unauthorized in any jurisdiction that does not give effect to all provisions of these terms and conditions, including without limitation this paragraph.</p>
+- entity: "node"
+  type: "standard_content_page"
+  title: "Kinect Consulting Terms and Conditions"
+  path:
+    - pathauto: false
+      alias: '/Kinect-Consulting-Terms-and-Conditions'

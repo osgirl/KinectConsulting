@@ -1,0 +1,21 @@
+uuid: 1218f7d8-6308-434a-a404-e574cc63edde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_style
+    - paragraphs.paragraphs_type.hero_item
+  module:
+    - options
+id: paragraph.hero_item.field_paragraph_style
+field_name: field_paragraph_style
+entity_type: paragraph
+bundle: hero_item
+label: Style
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

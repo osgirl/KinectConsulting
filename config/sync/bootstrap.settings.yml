@@ -5,8 +5,11 @@ _core:
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
-  url: ''
+  url: /themes/contrib/bootstrap/favicon.ico
   use_default: true
+navbar_position: fixed-top
+table_responsive: '-1'
+table: ''
 features:
   comment_user_picture: true
   comment_user_verification: true

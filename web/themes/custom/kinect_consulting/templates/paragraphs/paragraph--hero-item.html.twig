@@ -38,24 +38,39 @@
  * @ingroup themeable
  */
 #}
-{%
-    set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
-]
-%}
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  content.field_paragraph_style['#items'].getValue.0.value ? 'paragraph--style--' ~ content.field_paragraph_style['#items'].getValue.0.value
+] %}
+
+{% set hero_classes = [
+  'hero-wrapper',
+  content.field_image.0['#markup'] ? 'hero-image',
+] %}
+
+{% set hero_attributes = create_attribute() %}
+
 {% block paragraph %}
-    <div{{ attributes.addClass(classes) }}>
-        {% block content %}
-            <div class="hero-image" style="background-image: url('{{ content.field_image|render|striptags|trim }}');">
-                <div class="content-wrapper">
-                    {{ content.field_title }}
-                    {{ content.field_text }}
-                    {{ content.field_cta }}
-                </div>
-            </div>
-        {% endblock %}
-    </div>
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div{{ hero_attributes.addClass(hero_classes) }}
+        {% if content.field_image.0['#markup'] %}
+          style="background-image: url('{{ content.field_image.0['#markup'] }}');"
+        {% endif %}
+      >
+        <div class="content-wrapper">
+          {% if content.field_text['#items'].getString() or content.field_text['#items'].getString() %}
+            <h3>
+            {{ content.field_title }}
+            {{ content.field_text }}
+            </h3>
+          {% endif %}
+          {{ content.field_cta }}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
 {% endblock paragraph %}

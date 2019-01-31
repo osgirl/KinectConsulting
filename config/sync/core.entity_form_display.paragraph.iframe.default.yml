@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.iframe.field_height
+    - field.field.paragraph.iframe.field_paragraph_style
     - field.field.paragraph.iframe.field_url
     - field.field.paragraph.iframe.field_width
     - paragraphs.paragraphs_type.iframe
@@ -21,6 +22,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_paragraph_style:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_url:
     weight: 0

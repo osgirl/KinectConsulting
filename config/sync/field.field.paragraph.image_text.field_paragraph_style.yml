@@ -1,0 +1,21 @@
+uuid: 6d28f3f0-5e80-46ff-891b-b81472b210af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_style
+    - paragraphs.paragraphs_type.image_text
+  module:
+    - options
+id: paragraph.image_text.field_paragraph_style
+field_name: field_paragraph_style
+entity_type: paragraph
+bundle: image_text
+label: Style
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

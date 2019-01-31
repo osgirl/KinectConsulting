@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.paragraph.hero_item.field_cta
     - field.field.paragraph.hero_item.field_image
+    - field.field.paragraph.hero_item.field_paragraph_style
     - field.field.paragraph.hero_item.field_text
     - field.field.paragraph.hero_item.field_title
     - paragraphs.paragraphs_type.hero_item
   module:
     - image
     - link
+    - options
 id: paragraph.hero_item.default
 targetEntityType: paragraph
 bundle: hero_item
@@ -35,6 +37,13 @@ content:
       image_style: ''
     third_party_settings: {  }
     type: image_url
+    region: content
+  field_paragraph_style:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_text:
     weight: 4

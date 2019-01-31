@@ -51,3 +51,11 @@ commands:
   destroy:
     cmd: docker-compose down -v
     usage: Stop and remove containers, networks, images, and destroy volumes.
+
+  deploy-dev:
+    cmd: |
+      git -C /home/deploy/kc-drupal pull
+      ahoy -f /home/deploy/kc-drupal/.ahoy.yml drush cim -y
+      ahoy -f /home/deploy/kc-drupal/.ahoy.yml drush updb -y
+      ahoy -f /home/deploy/kc-drupal/.ahoy.yml drush cr
+    usage: Git pull, drush cim, drush updb and drush cr commands in dev-kinect-consulting instance.

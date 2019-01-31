@@ -1,0 +1,42 @@
+uuid: 9036d9b4-ef02-4d47-bc46-ba8405e61ead
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_paragraph_style
+field_name: field_paragraph_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: light
+      label: 'Neutral - Light'
+    -
+      value: dark
+      label: 'Neutral - Dark'
+    -
+      value: color-tint
+      label: 'Color - Very Light'
+    -
+      value: color-verypale
+      label: 'Color - Light'
+    -
+      value: color-pale
+      label: 'Color - Mid'
+    -
+      value: color-med
+      label: 'Color - Dark'
+    -
+      value: color-heavy
+      label: 'Color - Very Dark'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

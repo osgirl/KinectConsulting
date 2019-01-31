@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.hero_item.field_cta
     - field.field.paragraph.hero_item.field_image
+    - field.field.paragraph.hero_item.field_paragraph_style
     - field.field.paragraph.hero_item.field_text
     - field.field.paragraph.hero_item.field_title
     - image.style.thumbnail
@@ -40,6 +41,12 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_paragraph_style:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_text:
     weight: 4

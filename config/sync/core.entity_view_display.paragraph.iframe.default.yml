@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.iframe.field_height
+    - field.field.paragraph.iframe.field_paragraph_style
     - field.field.paragraph.iframe.field_url
     - field.field.paragraph.iframe.field_width
     - paragraphs.paragraphs_type.iframe
   module:
     - link
+    - options
 id: paragraph.iframe.default
 targetEntityType: paragraph
 bundle: iframe
@@ -21,6 +23,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_paragraph_style:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_url:
     weight: 0

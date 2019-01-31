@@ -1,0 +1,408 @@
+- entity: "node"
+  type: "article"
+  title: "Customization with Personalization in Angular"
+  status: 1
+  sticky: 0
+  uid: 1
+  body:
+    - format: "full_html"
+      value: |
+        <p>Customization and Personalization are critical components to providing an enriching user experience for any modern web/mobile application(s). Intent of this first post of the series is to provide an overview on the usage of Customization with Personalization to build powerful data, UX rich Angular applications</p>
+        <p>&nbsp;</p>
+        <h3>
+        	<b>Customization with Personalization</b></h3>
+        <p>People often use the words customization and personalization interchangeably, actually they serve different purposes towards the common goal i.e., providing a rich experience to the user of the application.</p>
+        <p>Applications like Yahoo, Azure Portal ... supports customization by letting the user of system decide the content, layout or functionality. This approach has an advantage as it’s the user who decides how his application should serve him. At the same time, users want their applications to be smart enough to offer suggestions/recommendations based on:</p>
+        <ul>
+        	<li>
+        		Location</li>
+        	<li>
+        		Preference</li>
+        	<li>
+        		Behavior over a course of time,</li>
+        	<li>
+        		Profile</li>
+        	<li>
+        		Role</li>
+        	<li>
+        		Prediction</li>
+        </ul>
+        <p>This is where Personalization shines. This scenario is most prevalent in applications like Amazon, eBay, Hulu, Netflix... Predictive Content Personalization based on machine learning algorithms, pattern matching are becoming increasingly popular &amp; would soon become indispensable for all the applications</p>
+        <p>We could build powerful, experience rich and smart applications by combining these two concepts. Let’s discuss about a simple use case to support ‘Role’ based personalization in an enterprise application</p>
+        <p>&nbsp;</p>
+        <h3>
+        	<b>Role based Personalization </b></h3>
+        <p>Imagine a company is in need of building its own IT Service Requests application using <a href="https://angular.io/">Angular</a> (skipping the application stack details for simplicity) secured by Identity and Access Management (IAM) solutions such as <a href="https://aws.amazon.com/cognito/">AWS Cognito,</a> <a href="https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis">Azure</a><a href="https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis"> AD</a>, <a href="https://auth0.com/">Auth0</a>, <a href="https://stormpath.com/">Stormpath</a>, <a href="http://www.keycloak.org/">Keycloak</a>.., one of the most common use cases for such a system would be :<br />
+        	<br />
+        	<i>Developer on the project would like to request for software/hardware per his needs and<i> </i>Manager of the project shall approve the request before it can be serviced by an IT person</i></p>
+        <p>At a very high level let’s list out the steps involved to implement the above use case:</p>
+        <ul>
+        	<li>
+        		Selected Identity &amp; Access Management (IAM) solution provider shall have two composite roles configured - one for Developer and one for Manager</li>
+        	<li>
+        		Angular shall present different view/content based on the user’s role</li>
+        </ul>
+        <ul>
+        	<li>
+        		If the user logged into the application is a Developer, he should only be able to request for a resource and shall not be able to view the approval process</li>
+        	<li>
+        		If the user logged into the application is a Manager, he should have access to request for a resource (of course for his needs) and shall also be able to view and initiate the approval workflow</li>
+        </ul>
+        <p>When we design and implement the application by using the above concepts, we could easily achieve role based personalization that would present:</p>
+        <ul>
+        	<li>
+        		Content based on user’s role/access level</li>
+        	<li>
+        		Experience customized (without any inputs) per user</li>
+        	<li>
+        		Recommendations based on the role</li>
+        </ul>
+        <h3>
+        	Conclusion</h3>
+        <p>We did a quick overview of customization , Personalization and their importance in applications , it' just the tip of the iceberg though</p>
+        <p>We'll dive deeper into Angular design and implementation details to achieve customization with different personalization options in the upcoming blog posts , STAY TUNED</p>
+        <hr />
+        <p><i>Phani Kiran Donthi C<i> </i>is a Solutions Architect at Kinect Consulting. Phani specializes<i> </i>in enterprise application architecture, design and implementation involving Angular, .NET, Node, Express,TypeScript, NativeScript, Azure and AWS</i><br />
+        	<br />
+        	<u><a href="http://www.kinect-consulting.com/">www.kinect-consulting.com</a></u><br />
+        	<u><a href="mailto:phanikirandonthic@kinect-consulting.com">phanikirandonthic@kinect-consulting.com</a></u></p>
+  field_author:
+    - "#process":
+        callback: "reference"
+        args:
+          - "taxonomy_term"
+          - vid: "authors"
+            name: "Phani Kiran Donthi C"
+  field_category:
+    - "#process":
+        callback: "reference"
+        args:
+          - "taxonomy_term"
+          - vid: "categories"
+            name: "JavaScript"
+  field_image:
+    - '#process':
+        callback: "file"
+        args:
+          - "image"
+          - filename: "wysiwig.png"
+      alt: "Personalization in Angular"
+
+- entity: "node"
+  type: "article"
+  title: "9 things to consider when designing microservices"
+  status: 1
+  sticky: 0
+  uid: 1
+  body:
+    - format: "full_html"
+      value: |
+        <p>Microservices have become the defacto architectural approach in the last couple of years and for a good reason. I'm not going to tell you why microservices should be used. I assume you know that. What I'd like to share is best practices for designing and deploying microservices with some specific recommendations for AWS.<br />
+        	<br />
+        	So let's get to it!</p>
+        <p><span class="kc-subtitle">Things to consider when designing microservices</span></p>
+        <h3>
+        	<b>Stateless</b></h3>
+        <p>Microservices should never rely on data stored in-memory, across multiple requests. Traditional applications often store session data in memory for fast access during the life of the session. This is an anti-pattern for microservices. Any “session” data that needs to be used by other requests must be saved in a persistent, non-ephemeral store or a distributed cache. The reason this is important is because if your service instance fails (and they often do when you're in the cloud), and the next request goes to a different instance (thanks to load balancers or service discovery), you will simply retrieve “session” data from a database or distributed cache.<br />
+        	&nbsp;</p>
+        <h3>
+        	Single Responsibility</h3>
+        <p>Microservice should be responsible for a specific business feature or bounded context (e.g. Sales Orders, Customers, Market Data, etc). It's impossible to know in advance how big or small it should be, that's why developing microservices (like any other software) is an iterative process. Single responsibility allows to encapsulate business logic in a single service, allows that service to change, evolve and scale independently of other services.<br />
+        	&nbsp;</p>
+        <h3>
+        	No DATA SHARING</h3>
+        <p>In order to provide accuracy and consistency of data, data managed by a microservice should never be accessed directly by other services. In other words, if Sales Orders service needs Customer data, it will contact Customers service for that data instead of reading directly from a database. In some cases Sales Orders service may decide to subscribe to Customer events and create its own internal view of Customer data for performance optimization, but it will always rely on Customers service for all the updates.<br />
+        	&nbsp;</p>
+        <h3>
+        	Preference to asynchronous service-to-service communication</h3>
+        <p>Another important characteristics of microservices is physical decoupling of requests for service to service communication. This can be achieved with messaging platforms. It requires a different design approach than traditional request/response communication, but it ensures that failures in other services won't affect the performance and availability of the calling service.<br />
+        	&nbsp;</p>
+        <h3>
+        	Idempotence</h3>
+        <p>The more moving parts a platform has the more chances for failures. Unlike traditional monolithic applications, microservices do not use distributed transactions. Therefore it is possible for parts of the transaction to succeed while others to fail. If the same transaction is retried we must ensure idempotency for those parts that succeeded.<br />
+        	&nbsp;</p>
+        <h3>
+        	DO NOT USE ephemeral storage, except for per request temporary needs</h3>
+        <p>We all remember the days we saved data to the file system, in a nice folder structure, so we can have fastest access to files required by our application. This is big “NO” for microservices. This goes together with stateless pattern and for the same reasons. The only exception to this is saving data temporarily during the the lifespan of a single request.<br />
+        	&nbsp;</p>
+        <h3>
+        	Service aggregator</h3>
+        <p>One of the consequences of Single Responsibility model is that web or mobile application may require to make multiple requests to get all the data for specific page. It's not unusual to call 5, 10 or 15 endpoints to collect all the information. A good design pattern for this use case is “service aggregator”. Mobile application will make a single service call to a service that will then call 5, 10 or 15 other services (preferably in parallel), collect and aggregate results into a single view object and return it to the mobile application. This makes UI development much simpler and improves overall response time, because instead of making 10 service calls over the Internet, these 10 calls are made within your network (e.g. AWS VPC).<br />
+        	&nbsp;</p>
+        <h3>
+        	CQRS</h3>
+        <p>Many applications have a disproportionate number of writes vs reads. Traditional software design puts write and read code within the same service, therefore the writes may slow down the reads and vice versa. The best way to remove this risk is to use CQRS (Command Query Responsibility Segregation) design pattern. As the name suggests, it separates commands (write/update/delete) from query (read). This separation allows to independently deploy heavy read service from light write service or vice versa. It is also an important design approach for Event Sourcing.<br />
+        	&nbsp;</p>
+        <h3>
+        	Event sourcing</h3>
+        <p>Have you ever heard of a requirement to keep track of all the activity within the platform and to allow for complete audit of such activities? Is your business constantly changing and you struggle to refactor existing database structure and code? Did you find a flaw in your code and now you have 6 months worth of data that was incorrectly derived based on that flaw? These are all legitimate reasons to consider event sourcing for your next application. Event sourcing stores all platform events in a read only event store (e.g. database) and uses those events to construct appropriate materialized views to service various parts of the application. Storing all events (i) allows easy auditing of all the business activities; (ii) allows to replay events from specific date if you need to implement new business logic or find a bug in your code. A good practice with event sourcing is to utilize CQRS, because event sourcing by nature separates events from data views.<br />
+        	<br />
+        	&nbsp;</p>
+        <h3>
+        	<b>Ways to deploy microservices on AWS</b></h3>
+        <p>Now let's review some of the recommended ways to deploy microservices on AWS.</p>
+        <h3>
+        	Docker</h3>
+        <p>This should go without saying - deploy all microservices as docker containers. Regardless of the underlying container orchestration services. This allows for easy testing on local development machines and easy deployment in lower and production environments, while ensuring the same code is tested and deployed in each case. So, regardless of the following recommendations, make sure to build docker image for your microservice, test that image locally and push to your private docker registry (e.g. ECR - EC2 Container Registry).</p>
+        <h3>
+        	ec2 / auto scaling group / elb</h3>
+        <p>A more traditional and straight forward way to deploy <b><i>more coarse-grained microservices</i></b> is via AWS Auto Scaling group. This entails a few simple steps:</p>
+        <ol>
+        	<li>
+        		Create an AWS ELB (Elastic Load Balancer) to provide a static DNS name and multi-AZ load balancing.</li>
+        	<li>
+        		Create a simple bash script as your EC2 “user data”. In a nutshell, this script will update your Amazon AMI with latest OS patches, pull appropriate docker image and run it.</li>
+        	<li>
+        		Create a launch an AWS Launch Configuration and use above “user data”. Use the smallest EC2 instance type for your use case to provide consistent experience and utilize most of the instance resources.</li>
+        	<li>
+        		Create an AWS Auto Scaling Group with above Launch Configuration and ELB. This will launch and maintain appropriate number of instances based on scaling conditions you set for the service.</li>
+        </ol>
+        <h3>
+        	ecs / docker / alb</h3>
+        <p>It will usually be more cost effective and easier to manage your microservices using AWS ECS (EC2 Container Services). ECS is a highly scalable, high performance Docker container management service. ECS runs on a cluster of instances, therefore allowing to deploy multiple docker containers across multiple instances. This is especially beneficial if you <b><i>microservices are more granular</i></b>. ECS integrates with other AWS services out of the box. Additional benefits of ECS is an ability to schedule containers and run batch jobs.<br />
+        	&nbsp;</p>
+        <h2>
+        	In conclusion</h2>
+        <p>What I hope you take away from this post is that good microservices architecture requires to change the way applications are designed and deployed. And, regardless of which cloud you use, just follow best practices for microservice design and deploy using cloud specific services.<br />
+        	&nbsp;</p>
+        <hr />
+        <p><i>Igor Royzis is a co-founder and Chief Architect of Kinect Consulting. Igor specializes in highly complex solutions architecture and strategy, with specific emphasis on cloud-native microservices, event sourcing, big data and analytics. Igor is an AWS Certified Architect Professional. </i><br />
+        	<br />
+        	<a href="http://www.kinect-consulting.com">www.kinect-consulting.com</a><br />
+        	<a href="mailto:iroyzis@kinect-consulting.com">iroyzis@kinect-consulting.com</a><br />
+        	<a href="https://www.linkedin.com/in/igorroyzis/">https://www.linkedin.com/in/igorroyzis/</a></p>
+  field_author:
+    - "#process":
+        callback: "reference"
+        args:
+          - "taxonomy_term"
+          - vid: "authors"
+            name: "Igor Royzis"
+  field_category:
+    - "#process":
+        callback: "reference"
+        args:
+          - "taxonomy_term"
+          - vid: "categories"
+            name: "Microservices"
+  field_image:
+    - "#process":
+        callback: "file"
+        args:
+          - "image"
+          - filename: "image4.jpg"
+      alt: "9 things to consider when designing microservices"
+
+- entity: "node"
+  type: "article"
+  title: "Breaking the monolith"
+  status: 1
+  sticky: 0
+  uid: 1
+  body:
+    - format: "full_html"
+      value: |
+        <p>Lots of articles have been written about the topic of microservices and ways of transforming legacy large enterprise platforms into scalable, performant, manageable, granular applications and services. Microservices is not a new concept, it's just a new term applied to proven software architecture and design patterns. From components to SOA to microservices, they all have plenty in common, specifically ability to separate concerns, reuse, scale, manage, deploy without resetting and changing the world.</p>
+        <p>With that in mind here is what I found important when the decision has been made to "break the monolith". And believe me, sooner or later this decision will definitely be made if you want your business to grow, evolve and stay agile. There is a lot more than technology decisions that have to be considered, but from purely technical point of view, everything you do will have to revolve around IaaS/PaaS (e.g. AWS), containers (e.g. docker), events/messages (e.g. Kafka, ActiveQM, RabbitMQ, SQS), horizontally scalable databases (e.g. Cassandra, MongoDB), Single Page Web Applications (e.g. Angular, React), CI/CD (e.g. Bamboo, Jenkens, Ansible, Chef, Puppet) and an open, agile, lean, DevOps culture.</p>
+        <p>Here is a high level process:</p>
+        <p><b>Discovery</b></p>
+        <ul>
+        	<li>
+        		Document all of the existing business processes, web, backend and messaging components. Doesn't have to be a 100 page document. High level overview is enough at this stage in order to assess the complexity of the existing platform.</li>
+        	<li>
+        		Document goals of digital transformation. Why and what are the important questions to answer.</li>
+        </ul>
+        <p><b>Assess your development team's strengths (programming languages, databases, tools, frameworks)</b></p>
+        <ul>
+        	<li>
+        		<p>Are you a RoR/Postgres shop? Java/Spring/Oracle? PHP/MySQL? Python/Django/MongoDB? The list goes on, but the goal here is to understand that if you have a good development team with solid knowledge in specific stacks, it makes sense to base your target architecture on those skillsets. Introduction of new technologies will be inevitable, but should be minimized to backend databases, tools and frameworks, and not core programming languages.</p>
+        	</li>
+        </ul>
+        <p><b>Assess your ops/infrastructure team's skill set and experience</b></p>
+        <ul>
+        	<li>
+        		<p>Most legacy platforms are managed by traditional operations/infrastructure teams, separated by a brick wall from development teams. This is just the way things are. Companies are slowly moving to DevOps culture, which means different things to different people, but the goal here is to make sure to identify the gaps within current it/ops and to gradually fill them via mentoring/training and new hires.</p>
+        	</li>
+        </ul>
+        <p><b>Research microservice frameworks that are most widely used with your team's existing technology stack.</b></p>
+        <ul>
+        	<li>
+        		<p>If you're a Java shop then go with Java/Spring Boot. For JavaScript go with Node.js. Python, .Net, you name it, each stack has good microservices frameworks. Do some research, build a POC and get your team excited.</p>
+        	</li>
+        </ul>
+        <p><b>Research JavaScript frameworks.</b></p>
+        <ul>
+        	<li>
+        		<p>It's very important to understand that the traditional monolith, server driven MVC style web applications do not scale in the new world and are anti-patterns for microservices based architecture. SPA (Single Page Application) is the way to go, with separate deployments of web applications from all microservices. Angular, React, Amber are a few popular frameworks to choose from.</p>
+        	</li>
+        </ul>
+        <p><b>Decide on on-premise vs cloud vs hybrid target infrastructure.</b></p>
+        <ul>
+        	<li>
+        		<p>It's not easy to just move to AWS or Azure if you have existing large on-premise infrastructure. Decision on what goes to the cloud vs what stays on premise has to be given serious thought. Take following into consideration: security, scalability, fault tolerance, cost, team skill set, ease of deployments.</p>
+        	</li>
+        </ul>
+        <p><b>Design high level architecture.</b></p>
+        <ul>
+        	<li>
+        		<p>Ok, here is where the fun part begins. How do you want your super-duper microservices based platform to look when it's all done (let's say 12 to 24 months from now) and why? How can you demonstrate the benefit of a large digital transformation initiative in 10 to 20 powerpoint slides and architectural diagrams and get full support and buy-in from the C-level executives? Well, make it balanced with the right level of business benefits, required investment, research/comparisons and of course sleek diagrams. You will have to go through multiple iterations, with multiple stakeholders until everyone (or most) are happy with the direction. Word of caution - there would often be resistance to change and even when the initiative is on its way there will be those who would enjoy to see your hard work go up in flames. But you're not going to let it happen!</p>
+        	</li>
+        </ul>
+        <p><b>Create POC for any technology not currently used by existing technology team.</b></p>
+        <ul>
+        	<li>
+        		<p>Let's assume that your current development team is using Java/Spring MVC, Tomcat and Oracle RDBMS and your target architecture consists of following technologies (AWS, Java, Spring Boot, SQS, SNS, ECS,Angular, Cassandra, Solr, Docker, etc). Here is where you need to make sure that development team understands all the moving parts, how they are built and how they interact with each other. Clone some repos from GitHub, create sample services, build docker images, deploy to AWS, hit some /hello endpoints, get the developers excited!</p>
+        	</li>
+        </ul>
+        <p><b>Partition architecture into "framework candidates" - parts of the architecture that can be developed as frameworks to simplify and standardize future development effort.</b></p>
+        <ul>
+        	<li>
+        		<p>Some of the obvious candidates are: Core (common db config/access, utilities, rest clients, security, logging, monitoring), ETL Framework (generic way to move data from legacy database to new database), S3 Storage Service, etc.</p>
+        	</li>
+        </ul>
+        <p><b>Select first application to develop using new architecture. </b></p>
+        <ul>
+        	<li>
+        		<p>This should be medium complexity <b><i>new</i></b> application. Not too simple and not too complex. Should preferably include most components of the target architecture (web application, microservices, events, etl, database). The goal of this first project is to show without any doubt that the new architecture is solid and make it an example and a reference implementation for all future development.</p>
+        	</li>
+        </ul>
+        <p><b>Break the monolith. This deserves a detailed separate writeup, but let's stick with high level for now.</b></p>
+        <ul>
+        	<li>
+        		Document future <b><i>detailed</i></b> architecture ( web applications, microservices, interactions, security, etc).</li>
+        	<li>
+        		Prioritize refactoring effort.</li>
+        	<li>
+        		Prioritize new services/applications effort.</li>
+        	<li>
+        		Adopt agile process.</li>
+        	<li>
+        		Involve DevOps from day one.</li>
+        </ul>
+        <p><b>Have fun! Really!</b></p>
+        <p>---- "Life is a series of natural and spontaneous changes. Don't resist them - that only creates sorrow. Let reality be reality. Let things flow naturally forward in whatever way they like." Lao Tzu ----</p>
+  field_author:
+    - "#process":
+        callback: "reference"
+        args:
+          - "taxonomy_term"
+          - vid: "authors"
+            name: "Igor Royzis"
+  field_category:
+    - "#process":
+        callback: "reference"
+        args:
+          - "taxonomy_term"
+          - vid: "categories"
+            name: "Microservices"
+  field_image:
+    - "#process":
+        callback: "file"
+        args:
+          - "image"
+          - filename: "techimage1_0.jpg"
+      alt: "Tech Image"
+
+- entity: "node"
+  type: "article"
+  title: "Modern Cloud Ready Applications"
+  status: 1
+  sticky: 1
+  uid: 1
+  body:
+    - format: "full_html"
+      value: |
+        <p>Chances are (dramatic pause) you are NOT yet 100% in the cloud running fully native cloud applications, with no old legacy applications holding you back.&nbsp; Am I right? I guess it is possible that you are a technology startup formed in the last couple of years.&nbsp; If you are that lucky startup founder, this post is not for you.&nbsp; If you are like the majority of the rest of us, you are out there in the wild world of IT stuck somewhere between the last software refresh you did years ago and the need to modernize again.&nbsp; &nbsp;&nbsp;</p>
+        <p>This post is meant to be a cornerstone linking to several conversations over time about how to modernize your applications as part of your journey to the cloud.&nbsp; Some of our posts will be more about the organization and cultural issues that may arise from these changes, and many will be about the technology itself.&nbsp; So, let’s get started!</p>
+        <p><strong>Why the cloud?</strong></p>
+        <p>There are books written on this subject and I have my own opinions.&nbsp; When I write them down, I will link it here.&nbsp; So, to be brief, which is hard for me because I am passionate about this, the cloud solves a lot of problems that I have been fighting throughout my career in IT.&nbsp; To force my brevity here are a few points:</p>
+        <ul>
+        	<li>
+        		It’s Quick – Meaning once I have the base foundations built, I can get almost any type of compute, service, database in minutes and in some cases seconds.&nbsp;</li>
+        	<li>
+        		Scalable – I can add as many resources as I need very quickly, and then take them away just as fast.</li>
+        	<li>
+        		Cost effective – I only pay for what I use and managed services are a game changer.</li>
+        	<li>
+        		Reliable – Taking advantage of the scalability to build reliability that I could have only dreamed about before.</li>
+        	<li>
+        		Secure – Really?&nbsp; Cloud is probably more secure.&nbsp; I will post more on this later.&nbsp; I can’t be brief on this subject.</li>
+        	<li>
+        		If you are a business or IT leader and not sold on the cloud yet, call me.&nbsp; I would love to talk more about your concerns, but it is not the point of this post.&nbsp;</li>
+        </ul>
+        <p><strong>Legacy Monolithic Applications</strong></p>
+        <p>There are many reasons why a business may want to modernize their legacy applications.&nbsp; Likely there is a need to support mobile form factors, upgrades in speed and performance, and as mentioned before, the wish to take advantage of cloud offerings.&nbsp; There are ways to take legacy applications to the cloud through “Lift and Shift” methods.&nbsp; It works, but does not take advantage of most of what the cloud has to offer. &nbsp;There are very valid reasons where this makes sense.&nbsp; However, this is the point of application modernization.&nbsp; Just putting an application in the cloud does not give you all the cloud advantages.&nbsp;</p>
+        <p>The vast majority of applications written before the cloud era cannot support the scalability of the cloud.&nbsp; These applications cannot suddenly scale to more power and then have it taken away.&nbsp; Software of that time was just not designed to handle such scenarios.&nbsp;</p>
+        <p>Refactoring an application is a tough decision.&nbsp; If you decide it is the best option, make sure you do it right.&nbsp; Get help, many of the tough lessons have already been solved.&nbsp; If you are interested in a high level approach to breaking up your applications, check out this post “Breaking the Monlith” by Igor Royzis our Chief Architect.&nbsp;</p>
+        <p><strong>New applications</strong></p>
+        <p>Legacy choices are tough.&nbsp; Investing money in an older application is much more a business decision than a technical one.&nbsp; However, if you are writing new applications you have to start moving forward into this new era of application development.&nbsp; It will be hard to explain in a few years why your application cannot take full advantage of cloud technology.&nbsp; Again, get help, we were there in the early days, and now these concepts are mature.&nbsp;</p>
+        <p><strong>Advantages of Modernization</strong></p>
+        <p>One of the reasons I feel Kinect Consulting has an advantage in this space, is we have ‘been there and done that’, but not as consultants that didn’t feel the pain of decisions after they left.&nbsp; The leadership of Kinect Consulting, including myself, did this work as internal IT leaders and architects. We had to make the tough decisions that someone that has only been an outside consultant may not understand.&nbsp; We have been in your shoes.</p>
+        <p>That being said, when looking at application modernization it is important to set goals that are important to your business.&nbsp; Business outcomes of a project like this should be the priority.&nbsp;</p>
+        <p>Here are some examples from our previous projects:</p>
+        <ul>
+        	<li>
+        		Improve on speed to market (Internal and external applications)</li>
+        	<li>
+        		Better user experience (speed, as well as, user interfaces)</li>
+        	<li>
+        		Broader support for multiple form factors (Mobile, Tablet, etc.)</li>
+        	<li>
+        		Ability to scale for peak hours or seasons</li>
+        </ul>
+        <p>There should also be IT outcomes. Here are a few my requirements on previous projects:</p>
+        <ul>
+        	<li>
+        		Must be secure</li>
+        	<li>
+        		Must be fully automated with ability to deploy as often as we want or need</li>
+        	<li>
+        		No manual configurations of infrastructure, must all be code and/or scripted</li>
+        	<li>
+        		Ability to monitor and improve on cost</li>
+        	<li>
+        		Reusability should be first priority (reduce cost by reusing services/code/modules)</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><strong>What does a modern cloud ready application look like?</strong></p>
+        <p>I don’t want this to be a technical post, so I will keep this at a high level.&nbsp; Please follow any links to get more details.&nbsp; Let’s start from the top.&nbsp;</p>
+        <p><strong>UI Layer</strong></p>
+        <p>The UI layer in this new world is so much more dynamic than in the past.&nbsp; To the user today, the UI is web on my desktop, phone, tablet, or an application on my mobile device.&nbsp; Good UI choices should support all of the above as a complete eco-system, not a separate technology for each platform.&nbsp; Web UI is also an easy place to save a lot of cost as Serverless cloud technology is now a simple solution.&nbsp;&nbsp;</p>
+        <p>Check out our posts on UI Frameworks:</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link to Angular posts</p>
+        <p>&nbsp;</p>
+        <p><strong>Microservices Layer</strong></p>
+        <p>The ability to scale quickly up and down, with independently deployable units, supporting full automation, are some of the reasons microservices are the core of cloud modernization.&nbsp; Check out some of our posts on Microservices:</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link to Microservices posts</p>
+        <p>&nbsp;</p>
+        <p><strong>Next Generation of Databases</strong></p>
+        <p>Cloud databases are not talked about as often and have been a little slower to take hold in the industry.&nbsp; These new offerings are a passion of ours and you will see more posts about these in the future.&nbsp; Think about your legacy database running across multiple datacenters at the same time with the ability to scale quickly.&nbsp; IF it were possible the cost would be enormous!&nbsp; Those were the old days. Depending on your needs, there are several options from a new class of databases that have completely changed the way we consider the backend or our applications.&nbsp; I will add a post about these options soon.</p>
+        <p>Application modernization is not simple, but it is much better and easier than any other time in the history of IT.&nbsp; There are a lot of decisions to make, but with a focus on business and IT outcomes the answers will become apparent with some guidance.&nbsp; Please check back as I will be adding more posts in the links as we expand out our Kinect Consulting Blog.</p>
+        <p>&nbsp;</p>
+        <p><em>Aaron Moore is CTO and President of Kinect Consulting</em></p>
+        <p><a href="http://www.kinect-consulting.com/">www.kinect-consulting.com</a><br />
+        	<a href="mailto:amoore@kinect-consulting.com">amoore@kinect-consulting.com</a><br />
+        	<a href="http://www.linkedin.com/in/aaron-moore-cto">http://www.linkedin.com/in/aaron-moore-cto</a></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+  field_author:
+    - "#process":
+        callback: "reference"
+        args:
+          - "taxonomy_term"
+          - vid: "authors"
+            name: "Aaron Moore"
+  field_category:
+    - "#process":
+        callback: "reference"
+        args:
+          - "taxonomy_term"
+          - vid: "categories"
+            name: "Cloud Technology"
+  field_image:
+    - "#process":
+        callback: "file"
+        args:
+          - "image"
+          - filename: "Cloudapps.jpg"
+      alt: "Modern Cloud Ready Applications"
